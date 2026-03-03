@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+  --gray-900: #1d1f23;
+  --gray-800: #32373e;
+  --gray-700: #4b525d;
+  --gray-600: #6b7280;
+  --gray-500: #8a919e;
+  --gray-400: #a3a9b6;
+  --gray-300: #bdc2cc;
+  --gray-200: #d1d5db;
+  --gray-100: #e5e7eb;
+  --gray-50:  #f3f4f6; 
+  --white:    #ffffff;
+  --primary-900: #2d1309;
+  --primary-800: #632a14;
+  --primary-700: #9c4221; 
+  --primary-600: #c9552b;
+  --primary-500: #ff6d3b;
+  --primary-400: #ff8c66;
+  --primary-300: #ffaa8c;
+  --primary-200: #ffd5c7;
+  --primary-100: #ffede6;
+  --secondary-900: #12112a;
+  --secondary-800: #25245d;
+  --secondary-700: #3a3891;
+  --secondary-600: #4e4bc6;
+  --secondary-500: #5e5bf9;
+  --secondary-400: #7f7dfa;
+  --secondary-300: #9f9dfb;
+  --secondary-200: #cfcefd;
+  --secondary-100: #efefff;
+  --success-900: #061a06;
+  --success-800: #0d4411;
+  --success-700: #156d1a;
+  --success-600: #22932a;
+  --success-500: #27b632;
+  --success-400: #53c75e;
+  --success-300: #81d88a;
+  --success-200: #c6e9ca;
+  --success-100: #e2f4e5;
+  --warning-900: #281504;
+  --warning-800: #66380c;
+  --warning-700: #9b5816;
+  --warning-600: #d07d1e;
+  --warning-500: #f99725;
+  --warning-400: #ffb154;
+  --warning-300: #ffcb85;
+  --warning-200: #ffe4be;
+  --warning-100: #fff4e5;
+  --danger-900: #250a0a;
+  --danger-800: #5c1b1b;
+  --danger-700: #8e2b2b;
+  --danger-600: #bc3a3a;
+  --danger-500: #e54545;
+  --danger-400: #ec7272;
+  --danger-300: #f19b9b;
+  --danger-200: #f7c9c9;
+  --danger-100: #fdf2f2;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-family: var(--font-main);
+  font-weight: var(--fw-medium); 
+  font-size: var(--fs-body-lg);   
+  padding: 10px 20px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+
+
+.btn-primary {
+  background-color: var(--primary-700);
+  color: white;
+}
+.btn-primary:hover {
+  background-color: var(--primary-800);
+}
+
+
+.btn-secondary {
+  background-color: var(--secondary-600);
+  color: white;
+}
+.btn-secondary:hover {
+  background-color: var(--secondary-700);
+}
+
+
+.btn-danger {
+  background-color: var(--danger-500);
+  color: white;
+}
+
