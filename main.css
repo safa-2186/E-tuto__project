@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -140,6 +141,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 
 .course-card:hover {
   transform: translateY(-6px);
@@ -391,3 +393,4 @@ body {
 .btn-light-primary:hover {
   background-color: var(--primary-200);
 }
+
