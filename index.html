@@ -1,330 +1,203 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-Learning Instructor Template</title>
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./main.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-Tutor</title>
-    <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!--Navigation-->
-
     <header>
+      <nav class="top-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Become an Instructor</a></li>
+        </ul>
 
-        <nav class="top-nav">
+        <div class="usd-eng">
+          <div class="usd">
+            <div class="usd">USD</div>
+            <img src="assets/imgs/ChevronDown.svg" alt="ChevronDown" />
+          </div>
 
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Courses</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Become an Instructor</a></li>
-            </ul>
+          <div class="eng">
+            <div class="eng">English</div>
+            <img src="assets/imgs/ChevronDown.svg" alt="ChevronDown" />
+          </div>
+        </div>
+      </nav>
 
-            <div class="usd-eng">
+      <nav class="first-nav">
+        <div class="left">
+          <div class="logo">
+            <img src="assets/icons/GraduationCap.svg" alt="logo" />
+            <h1>E-tutor</h1>
+          </div>
 
-                <div class="usd">
-                    <div class="usd">USD</div>
-                    <img src="assets/imgs/ChevronDown.svg" alt="ChevronDown">
-                </div>
-
-                <div class="eng">
-                    <div class="eng">English</div>
-                    <img src="assets/imgs/ChevronDown.svg" alt="ChevronDown">
-                </div>
-
+          <div class="category-search">
+            <div class="category">
+              <span>Browse</span>
+              <img src="assets/imgs/ChevronDown-browse.svg" alt="ChevronDown" />
             </div>
-
-        </nav>
-
-        <nav class="first-nav">
-
-            <div class="left">
-
-                <div class="logo">
-                   <img src="assets/icons/GraduationCap.svg" alt="logo">
-                   <h1>E-tutor</h1>
-                </div>  
-
-                <div class="category-search">
-                    <div class="category">
-                        <span>Browse</span>
-                        <img src="assets/imgs/ChevronDown-browse.svg" alt="ChevronDown">
-                    </div>
-                    <div class="search">
-                        <img src="assets/icons/MagnifyingGlass.svg" alt="search">
-                        <span>What do you want learn...</span>
-                    </div>
-
-                </div>
-                
-              
+            <div class="search">
+              <img src="assets/icons/MagnifyingGlass.svg" alt="search" />
+              <span>What do you want learn...</span>
             </div>
+          </div>
+        </div>
 
-            <div class="right">
-                <div class="icons">
-                    <img src="assets/icons/Bell.svg" alt="bell">
-                    <img src="assets/icons/Heart.svg" alt="heart">
-                    <img src="assets/icons/ShoppingCartSimple.svg" alt="shoppingcart">
-                </div>
-                <div class="buttons">
-                    <button class="btn-secondary-primary">Create Account</button>
-                    <button class="btn-primary-primary">Sign In</button>
-                </div>
-            </div>
-
-    <div class="container">
-        <section class="hero-grid">
-            <div class="cta-card orange-bg">
-                <div class="cta-content">
-                    <h1>Become an instructor</h1>
-                    <p>Instructors from around the world teach millions of students on Udemy. We provide the tools and skills to teach what you love.</p>
-                    <a href="#" class="btn-white">Start Teaching &rarr;</a>
-                </div>
-                <div class="cta-image">
-                    <img src="./assets/imgs/Become an Instructor (1).png" alt="Instructor pointing">
-                </div>
-            </div>
-            <div class="steps-card">
-                <h2>Your teaching & earning steps</h2>
-                <div class="steps-list">
-                    <div class="step-item">
-                        <span class="step-num one">1</span>
-                        <p>Apply to become instructor</p>
-                    </div>
-                    <div class="step-item">
-                        <span class="step-num two">2</span>
-                        <p>Build & edit your profile</p>
-                    </div>
-                    <div class="step-item">
-                        <span class="step-num three">3</span>
-                        <p>Create your new course</p>
-                    </div>
-                    <div class="step-item">
-                        <span class="step-num four">4</span>
-                        <p>Start teaching & earning</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="instructors-section">
-            <div class="section-header">
-                <h2>Top instructor of the month</h2>
-            </div>
-            
-            <div class="instructor-grid">
-                <div class="instructor-card">
-                    <div class="img-wrapper yellow"><img src="./assets/imgs/Image (11).png" alt="Devon Lane"></div>
-                    <h3>Devon Lane</h3>
-                    <span>Senior Developer</span>
-                    <hr>
-                    <div class="card-footer">
-                        <span class="rating">⭐ 4.6</span>
-                        <span class="students"><b>854</b> students</span>
-                    </div>
-                </div>
-                <div class="instructor-card">
-                    <div class="img-wrapper grey"><img src="./assets/imgs/Image (12).png" alt="Darrell Steward"></div>
-                    <h3>Darrell Steward</h3>
-                    <span>Digital Product Designer</span>
-                    <hr>
-                    <div class="card-footer">
-                        <span class="rating">⭐ 4.9</span>
-                        <span class="students"><b>451,444</b> students</span>
-                    </div>
-                </div>
-                <div class="instructor-card">
-                    <div class="img-wrapper blue"><img src="./assets/imgs/Image (13).png" alt="Jane Cooper"></div>
-                    <h3>Jane Cooper</h3>
-                    <span>UI/UX Designer</span>
-                    <hr>
-                    <div class="card-footer">
-                        <span class="rating">⭐ 4.8</span>
-                        <span class="students"><b>435,671</b> students</span>
-                    </div>
-                </div>
-                <div class="instructor-card">
-                    <div class="img-wrapper purple"><img src="./assets/imgs/Image (14).png" alt="Albert Flores"></div>
-                    <h3>Albert Flores</h3>
-                    <span>Adobe Instructor</span>
-                    <hr>
-                    <div class="card-footer">
-                        <span class="rating">⭐ 4.7</span>
-                        <span class="students"><b>511,123</b> students</span>
-                    </div>
-                </div>
-                <div class="instructor-card">
-                    <div class="img-wrapper green"><img src="./assets/imgs/Image (15).png" alt="Kathryn Murphy"></div>
-                    <h3>Kathryn Murphy</h3>
-                    <span>Lead Developer</span>
-                    <hr>
-                    <div class="card-footer">
-                        <span class="rating">⭐ 4.2</span>
-                        <span class="students"><b>2,711</b> students</span>
-                    </div>
-                </div>
-            </div>
-            <p class="bottom-cta">Thousands of students waiting for a instructor. <a href="#">Become Instructor &rarr;</a></p>
-        </section>
-
-        <section class="trust-section">
-            <div class="trust-info">
-                <h2>6.3k trusted companies</h2>
-                <p>Nullam egestas tellus at enim ornare tristique. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
-            </div>
-            <div class="logo-grid">
-                <div class="logo-card"><img src="./assets/imgs/Vector (9).png" alt="Netflix"></div>
-                <div class="logo-card"><img src="./assets/imgs/youtube.png" alt="YouTube"></div>
-                <div class="logo-card"><img src="./assets/imgs/google.png" alt="Google"></div>
-                <div class="logo-card"><img src="./assets/imgs/lenovo.png" alt="Lenovo"></div>
-                <div class="logo-card"><img src="./assets/imgs/slack.png" alt="Slack"></div>
-                <div class="logo-card"><img src="./assets/imgs/verizon.png" alt="Verizon"></div>
-                <div class="logo-card"><img src="./assets/imgs/lexmark.png" alt="Lexmark"></div>
-                <div class="logo-card"><img src="./assets/imgs/microsoft.png" alt="Microsoft"></div>
-            </div>
-        </section>
-    </div>
-
-</body>
-</html>
-=======
-        </nav>
-         
+        <div class="right">
+          <div class="icons">
+            <img src="assets/icons/Bell.svg" alt="bell" />
+            <img src="assets/icons/Heart.svg" alt="heart" />
+            <img src="assets/icons/ShoppingCartSimple.svg" alt="shoppingcart" />
+          </div>
+          <div class="buttons">
+            <button class="btn-secondary-primary">Create Account</button>
+            <button class="btn-primary-primary">Sign In</button>
+          </div>
+        </div>
+      </nav>
+      
     </header>
 
     <!--First section-->
 
     <section class="hero">
-        <div class="content">
-            <h1>Learn with expert anytime anywhere</h1>
-            <p>Our mision is to help people to find the best course online and learn with expert anytime, anywhere.</p>
-            <button class="btn-primary-primary">Create Account</button>
-        </div>
-        <div class="image-box">
-            <img src="assets/imgs/hero-image.png" alt="heroimage">
-        </div>
+      <div class="content">
+        <h1>Learn with expert anytime anywhere</h1>
+        <p>
+          Our mision is to help people to find the best course online and learn
+          with expert anytime, anywhere.
+        </p>
+        <button class="btn-primary-primary">Create Account</button>
+      </div>
+      <div class="image-box">
+        <img src="assets/imgs/hero-image.png" alt="heroimage" />
+      </div>
     </section>
 
     <!--Category section-->
 
     <section class="top-category">
+      <h2>Browse top category</h2>
 
-        <h2>Browse top category</h2>
-
-        <div class="container">
-
-            <div class="collection secondary">
-                <img src="assets/icons/Frame 145.svg" alt="">
-                <div class="content">
-                    <h3>Label</h3>
-                    <p>63,476 Courses</p>
-                </div>
-            </div>
-
-            <div class="collection success">
-                <img src="assets/icons/Frame 145 (1).svg" alt="">
-                <div class="content">
-                    <h3>Business</h3>
-                    <p>52,822 Courses</p>
-                </div>
-            </div>
-
-            <div class="collection warning">
-                <img src="assets/icons/Frame 145 (2).svg" alt="">
-                <div class="content">
-                    <h3>Finance & Accounting</h3>
-                    <p>33,841 Courses</p>
-                </div>
-            </div>
-
-            <div class="collection error">
-                <img src="assets/icons/Frame 145 (3).svg" alt="">
-                <div class="content">
-                    <h3>IT & Software</h3>
-                    <p>22,649 Courses</p>
-                </div>
-            </div>
-
-            <div class="collection white">
-                <img src="assets/icons/Frame 145 (4).svg" alt="">
-                <div class="content">
-                    <h3>Personal Development</h3>
-                    <p>20,126 Courses</p>
-                </div>
-            </div>
-
-            <div class="collection gray">
-                <img src="assets/icons/Frame 145 (5).svg" alt="">
-                <div class="content">
-                    <h3>Office Productivity</h3>
-                    <p>13,932 Courses</p>
-                </div>
-            </div>
-
-            <div class="collection secondary">
-                <img src="assets/icons/Frame 145 (6).svg" alt="">
-                <div class="content">
-                    <h3>Marketing</h3>
-                    <p>12,068 Courses</p>
-                </div>
-            </div>
-
-            <div class="collection gray">
-                <img src="assets/icons/Frame 145 (7).svg" alt="">
-                <div class="content">
-                    <h3>Photography & Video</h3>
-                    <p>6,196 Courses</p>
-                </div>
-            </div>
-
-            <div class="collection warning">
-                <img src="assets/icons/Frame 145 (8).svg" alt="">
-                <div class="content">
-                    <h3>Lifestyle</h3>
-                    <p>2,736 Courses</p>
-                </div>
-            </div>
-
-            <div class="collection primary">
-                <img src="assets/icons/Frame 145 (9).svg" alt="">
-                <div class="content">
-                    <h3>Design</h3>
-                    <p>2,600 Courses</p>
-                </div>
-            </div>
-
-            <div class="collection success">
-                <img src="assets/icons/Frame 145 (10).svg" alt="">
-                <div class="content">
-                    <h3>Health & Fitness</h3>
-                    <p>1,678 Courses</p>
-                </div>
-            </div>
-
-            <div class="collection warning">
-                <img src="assets/icons/Frame 145 (11).svg" alt="">
-                <div class="content">
-                    <h3>Music</h3>
-                    <p>959 Courses</p>
-                </div>
-            </div>
-
+      <div class="container">
+        <div class="collection secondary">
+          <img src="assets/icons/Frame 145.svg" alt="" />
+          <div class="content">
+            <h3>Label</h3>
+            <p>63,476 Courses</p>
+          </div>
         </div>
 
-        <div class="more-categories">
-            <p>We have more category & subcategory.</p>
-            <button>Browse All</button>
+        <div class="collection success">
+          <img src="assets/icons/Frame 145 (1).svg" alt="" />
+          <div class="content">
+            <h3>Business</h3>
+            <p>52,822 Courses</p>
+          </div>
         </div>
+
+        <div class="collection warning">
+          <img src="assets/icons/Frame 145 (2).svg" alt="" />
+          <div class="content">
+            <h3>Finance & Accounting</h3>
+            <p>33,841 Courses</p>
+          </div>
+        </div>
+
+        <div class="collection error">
+          <img src="assets/icons/Frame 145 (3).svg" alt="" />
+          <div class="content">
+            <h3>IT & Software</h3>
+            <p>22,649 Courses</p>
+          </div>
+        </div>
+
+        <div class="collection white">
+          <img src="assets/icons/Frame 145 (4).svg" alt="" />
+          <div class="content">
+            <h3>Personal Development</h3>
+            <p>20,126 Courses</p>
+          </div>
+        </div>
+
+        <div class="collection gray">
+          <img src="assets/icons/Frame 145 (5).svg" alt="" />
+          <div class="content">
+            <h3>Office Productivity</h3>
+            <p>13,932 Courses</p>
+          </div>
+        </div>
+
+        <div class="collection secondary">
+          <img src="assets/icons/Frame 145 (6).svg" alt="" />
+          <div class="content">
+            <h3>Marketing</h3>
+            <p>12,068 Courses</p>
+          </div>
+        </div>
+
+        <div class="collection gray">
+          <img src="assets/icons/Frame 145 (7).svg" alt="" />
+          <div class="content">
+            <h3>Photography & Video</h3>
+            <p>6,196 Courses</p>
+          </div>
+        </div>
+
+        <div class="collection warning">
+          <img src="assets/icons/Frame 145 (8).svg" alt="" />
+          <div class="content">
+            <h3>Lifestyle</h3>
+            <p>2,736 Courses</p>
+          </div>
+        </div>
+
+        <div class="collection primary">
+          <img src="assets/icons/Frame 145 (9).svg" alt="" />
+          <div class="content">
+            <h3>Design</h3>
+            <p>2,600 Courses</p>
+          </div>
+        </div>
+
+        <div class="collection success">
+          <img src="assets/icons/Frame 145 (10).svg" alt="" />
+          <div class="content">
+            <h3>Health & Fitness</h3>
+            <p>1,678 Courses</p>
+          </div>
+        </div>
+
+        <div class="collection warning">
+          <img src="assets/icons/Frame 145 (11).svg" alt="" />
+          <div class="content">
+            <h3>Music</h3>
+            <p>959 Courses</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="more-categories">
+        <p>We have more category & subcategory.</p>
+        <button>Browse All</button>
+      </div>
     </section>
 
-  
     <section class="selling-courses">
       <div class="selling-courses-content container">
         <h1 class="selling-courses-h1">Best selling courses</h1>
@@ -882,7 +755,159 @@
         </div>
       </div>
     </section>
+
+    <!-- Adam developer section -->
+
+     <section class="instructor-section">
+    <div class="container">
+        <section class="hero-grid">
+          <div class="cta-card orange-bg">
+            <div class="cta-content">
+              <h1>Become an instructor</h1>
+              <p>
+                Instructors from around the world teach millions of students on
+                Udemy. We provide the tools and skills to teach what you love.
+              </p>
+              <a href="#" class="btn-white">Start Teaching &rarr;</a>
+            </div>
+            <div class="cta-image">
+              <img
+                src="./assets/imgs/Become an Instructor (1).png"
+                alt="Instructor pointing"
+              />
+            </div>
+          </div>
+          <div class="steps-card">
+            <h2>Your teaching & earning steps</h2>
+            <div class="steps-list">
+              <div class="step-item">
+                <span class="step-num one">1</span>
+                <p>Apply to become instructor</p>
+              </div>
+              <div class="step-item">
+                <span class="step-num two">2</span>
+                <p>Build & edit your profile</p>
+              </div>
+              <div class="step-item">
+                <span class="step-num three">3</span>
+                <p>Create your new course</p>
+              </div>
+              <div class="step-item">
+                <span class="step-num four">4</span>
+                <p>Start teaching & earning</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="instructors-section">
+          <div class="section-header">
+            <h2>Top instructor of the month</h2>
+          </div>
+
+          <div class="instructor-grid">
+            <div class="instructor-card">
+              <div class="img-wrapper yellow">
+                <img src="./assets/imgs/Image (11).png" alt="Devon Lane" />
+              </div>
+              <h3>Devon Lane</h3>
+              <span>Senior Developer</span>
+              <hr />
+              <div class="card-footer">
+                <span class="rating">⭐ 4.6</span>
+                <span class="students"><b>854</b> students</span>
+              </div>
+            </div>
+            <div class="instructor-card">
+              <div class="img-wrapper grey">
+                <img src="./assets/imgs/Image (12).png" alt="Darrell Steward" />
+              </div>
+              <h3>Darrell Steward</h3>
+              <span>Digital Product Designer</span>
+              <hr />
+              <div class="card-footer">
+                <span class="rating">⭐ 4.9</span>
+                <span class="students"><b>451,444</b> students</span>
+              </div>
+            </div>
+            <div class="instructor-card">
+              <div class="img-wrapper blue">
+                <img src="./assets/imgs/Image (13).png" alt="Jane Cooper" />
+              </div>
+              <h3>Jane Cooper</h3>
+              <span>UI/UX Designer</span>
+              <hr />
+              <div class="card-footer">
+                <span class="rating">⭐ 4.8</span>
+                <span class="students"><b>435,671</b> students</span>
+              </div>
+            </div>
+            <div class="instructor-card">
+              <div class="img-wrapper purple">
+                <img src="./assets/imgs/Image (14).png" alt="Albert Flores" />
+              </div>
+              <h3>Albert Flores</h3>
+              <span>Adobe Instructor</span>
+              <hr />
+              <div class="card-footer">
+                <span class="rating">⭐ 4.7</span>
+                <span class="students"><b>511,123</b> students</span>
+              </div>
+            </div>
+            <div class="instructor-card">
+              <div class="img-wrapper green">
+                <img src="./assets/imgs/Image (15).png" alt="Kathryn Murphy" />
+              </div>
+              <h3>Kathryn Murphy</h3>
+              <span>Lead Developer</span>
+              <hr />
+              <div class="card-footer">
+                <span class="rating">⭐ 4.2</span>
+                <span class="students"><b>2,711</b> students</span>
+              </div>
+            </div>
+          </div>
+          <p class="bottom-cta">
+            Thousands of students waiting for a instructor.
+            <a href="#">Become Instructor &rarr;</a>
+          </p>
+        </section>
+
+        <section class="trust-section">
+          <div class="trust-info">
+            <h2>6.3k trusted companies</h2>
+            <p>
+              Nullam egestas tellus at enim ornare tristique. Class aptent
+              taciti sociosqu ad litora torquent per conubia nostra.
+            </p>
+          </div>
+          <div class="logo-grid">
+            <div class="logo-card">
+              <img src="./assets/imgs/Vector (9).png" alt="Netflix" />
+            </div>
+            <div class="logo-card">
+              <img src="./assets/imgs/youtube.png" alt="YouTube" />
+            </div>
+            <div class="logo-card">
+              <img src="./assets/imgs/google.png" alt="Google" />
+            </div>
+            <div class="logo-card">
+              <img src="./assets/imgs/lenovo.png" alt="Lenovo" />
+            </div>
+            <div class="logo-card">
+              <img src="./assets/imgs/slack.png" alt="Slack" />
+            </div>
+            <div class="logo-card">
+              <img src="./assets/imgs/verizon.png" alt="Verizon" />
+            </div>
+            <div class="logo-card">
+              <img src="./assets/imgs/lexmark.png" alt="Lexmark" />
+            </div>
+            <div class="logo-card">
+              <img src="./assets/imgs/microsoft.png" alt="Microsoft" />
+            </div>
+          </div>
+        </section>
+      </div>
   </body>
 </html>
-
->>>>>>> a5c4bdffa2c1509dd5204578f262ec30d9b2b3e1

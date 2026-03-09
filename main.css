@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :root {
     --primary-orange: #FF5722;
     --text-dark: #1D2026;
@@ -13,8 +12,7 @@
     padding: 0;
 }
 
-body {
-=======
+
 * {
   margin: 0;
   padding: 0;
@@ -84,14 +82,12 @@ body {
 
 
 body{
->>>>>>> a5c4bdffa2c1509dd5204578f262ec30d9b2b3e1
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-light);
     color: var(--text-dark);
     line-height: 1.6;
     padding: 40px 0;
 }
-<<<<<<< HEAD
 
 .container {
     max-width: 1100px;
@@ -188,84 +184,6 @@ body{
     column-gap: 40px;
     /* Fara9 kbir bin l-columns bach may-t-lass9och */
     row-gap: 20px;
-=======
-    
-    
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  font-family: var(--font-main);
-  font-weight: var(--fw-medium);
-  font-size: var(--fs-body-lg);
-  padding: 10px 20px;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  border: none;
-}
-
-.btn-primary {
-  background-color: var(--primary-700);
-  color: white;
-}
-.btn-primary:hover {
-  background-color: var(--primary-800);
-}
-
-
-.btn-primary-primary {
-  background-color: var(--primary-500);
-  color: white;
-  padding-right: 24px;
-  padding-left: 24px;
-  font-weight: 600;
-  font-size: 16px;
-  height: 48px;
-  border: none;
-}
-
-.btn-primary-primary:hover {
-  background-color: var(--primary-600);
-  color: white;
-  
-}
-
-
-
-.btn-secondary-primary {
-  background-color: var(--primary-100);
-  color: var(--primary-500);
-  padding-right: 24px;
-  padding-left: 24px;
-  font-weight: 600;
-  font-size: 16px;
-  height: 48px;
-  border: none;
-
-
-}
-
-
-.btn-secondary-primary:hover{
-  background-color: var(--primary-200);
-  color: var(--primary-600);
-}
-
-
-.btn-secondary {
-  background-color: var(--secondary-600);
-  color: white;
-}
-.btn-secondary:hover {
-  background-color: var(--secondary-700);
-}
-
-.btn-danger {
-  background-color: var(--danger-500);
-  color: white;
->>>>>>> a5c4bdffa2c1509dd5204578f262ec30d9b2b3e1
 }
 .container {
   max-width: 1480px;
@@ -273,8 +191,6 @@ body{
   padding: 0 20px;
   width: 100%;
 }
-
-<<<<<<< HEAD
 .step-item {
     display: flex;
     align-items: center;
@@ -455,7 +371,6 @@ body{
         grid-template-columns: 1fr 1fr;
     }
 }
-=======
 
 /*selling courses section*/
 .selling-courses {
@@ -1112,4 +1027,3 @@ body{
   line-height: 22px;
   
 }
->>>>>>> a5c4bdffa2c1509dd5204578f262ec30d9b2b3e1
