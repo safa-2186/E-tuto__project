@@ -1,17 +1,9 @@
-
-<<<<<<< HEAD
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-=======
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
->>>>>>> refs/remotes/origin/main
-}
 
+}
 
 :root {
   --gray-900: #1D2026;
@@ -22,16 +14,6 @@
   --gray-400: #a3a9b6;
   --gray-300: #bdc2cc;
   --gray-200: #d1d5db;
-<<<<<<< HEAD
-  --gray-100: #E9EAF0;
-  --gray-50:  #F5F7FA;
-  --white:    #ffffff;
-  --primary-900: #2d1309;
-  --primary-800: #632a14;
-  --primary-700: #9c4221; 
-  --primary-600: #CC522B;
-  --primary-500: #FF6636;
-=======
   --gray-100: #e5e7eb;
   --gray-50: #f3f4f6;
   --white: #ffffff;
@@ -40,7 +22,6 @@
   --primary-700: #9c4221;
   --primary-600: #c9552b;
   --primary-500: #ff6d3b;
->>>>>>> refs/remotes/origin/main
   --primary-400: #ff8c66;
   --primary-300: #ffaa8c;
   --primary-200: #FFDDD1;
@@ -84,17 +65,11 @@
   --error-100:#FFF0F0;
 }
 
-<<<<<<< HEAD
+
 body{
     font-family: 'Inter', sans-serif;
     
     
-=======
-body {
-  font-family: "Inter", sans-serif;
->>>>>>> refs/remotes/origin/main
-}
-
 
 .btn {
   display: inline-flex;
@@ -118,7 +93,7 @@ body {
   background-color: var(--primary-800);
 }
 
-<<<<<<< HEAD
+
 .btn-primary-primary {
   background-color: var(--primary-500);
   color: white;
@@ -157,8 +132,7 @@ body {
   color: var(--primary-600);
 }
 
-=======
->>>>>>> refs/remotes/origin/main
+
 .btn-secondary {
   background-color: var(--secondary-600);
   color: white;
@@ -177,6 +151,8 @@ body {
   padding: 0 20px;
   width: 100%;
 }
+
+
 /*selling courses section*/
 .selling-courses {
   display: block;    
@@ -464,19 +440,6 @@ body {
 .btn-light-primary:hover {
   background-color: var(--primary-200);
 }
-
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
 
 
 
