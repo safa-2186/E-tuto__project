@@ -1016,3 +1016,244 @@ body{
   line-height: 22px;
   
 }
+
+
+
+
+
+
+/*    Footer    */
+
+footer {
+  background-color: var(--gray-900);
+  gap: 80px;
+}
+
+.call-to-action {
+  padding: 100px 300px;
+  gap: 136px;
+  box-shadow: 0px -1px 0px 0px #363B4780 inset;
+  display: flex;
+}
+
+.call-to-action .content h2 {
+  font-weight: 600;
+  color: white;
+  font-size: 40px;
+  margin-bottom: 32px;
+  line-height: 48px;
+}
+
+.call-to-action .content .buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.call-to-action .fun-facts {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 47px;
+  margin-top: 47px;
+  
+  
+}
+
+
+.call-to-action .fun-facts .fun-fact h2 {
+  color: white;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 12px;
+}
+
+
+.call-to-action .fun-facts .fun-fact p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--gray-300);
+}
+
+
+.main-footer {
+  padding: 80px 300px;
+  box-shadow: 0px -1px 0px 0px #363B4780 inset;
+  display: flex;
+}
+
+
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.main-footer .eduguard {
+  gap: 26px;
+}
+
+.main-footer .eduguard .logo {
+  display: flex;
+}
+
+
+.main-footer .eduguard h1 {
+  color: white;
+  margin-left: 9px;
+  
+}
+
+.main-footer .eduguard p {
+  color: var(--gray-500);
+  margin-top: 20px;
+}
+
+.main-footer .explore {
+  gap: 20px;
+}
+
+.main-footer .explore h3 {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.main-footer .explore a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--gray-500);
+  text-decoration: none;
+  gap: 6px;
+  
+}
+
+.main-footer .explore a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--primary-orange);
+  
+}
+
+.main-footer .quick-links {
+  gap: 20px;
+}
+
+.main-footer .quick-links h3 {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 20px;
+
+}
+
+.main-footer .quick-links a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--gray-500);
+  text-decoration: none;
+  gap: 6px;
+
+}
+
+.main-footer .quick-links a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--primary-orange);
+  
+}
+
+
+.main-footer .support  {
+  gap: 20px;
+
+}
+
+.main-footer .support h3 {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.main-footer .support a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--gray-500);
+  text-decoration: none;
+  gap: 6px;
+
+}
+
+.main-footer .support a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--primary-orange);
+  
+}
+
+
+.main-footer .download-app {
+  gap: 20px;
+}
+
+.main-footer .download-app h3 {
+   text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+
+.main-footer .download-app .app  {
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  gap: 12px;
+}
+
+
+
+
+.bottom-footer {
+ padding: 24px 300px;
+ justify-content: space-between;
+ display: flex;
+}
+
+.bottom-footer p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--gray-500);
+}
+
+.bottom-footer p span {
+  font-weight: 400;
+  color: white;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+
+.bottom-footer .language {
+  width: 200px;
+  height: 48px;
+  border: 1px solid var(--gray-800);
+  display: flex;
+  align-items: center;
+  gap: 95px;
+  
+}
+
+.bottom-footer .language span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--gray-500);
+  margin-left: 18px;
+}
