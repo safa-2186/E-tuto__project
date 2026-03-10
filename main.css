@@ -844,6 +844,81 @@ body{
   gap: 12px;
 }
 
+.btn-primary-primary {
+    padding-left: 24px;
+    padding-right: 24px;
+    background-color: #FF6636;
+    gap: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 48px;
+    color: white;
+    border: none;
+}
+
+.btn-primary-primary:hover {
+    background-color: #CC522B;
+}
+
+.btn-secondary-primary {
+    padding-left: 24px;
+    padding-right: 24px;
+    background-color: #FFEEE8;
+    gap: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 48px;
+    color: #FF6636;
+    border: none;
+
+}
+
+
+.btn-secondary-primary:hover {
+    background-color: #FFDDD1;
+    color: #CC522B;
+}
+
+
+.btn-secondary-gray {
+    padding-left: 24px;
+    padding-right: 24px;
+    background-color: var(--gray-800);
+    gap: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 48px;
+    color: white;
+    border: none;
+
+}
+
+
+.btn-secondary-gray:hover {
+  background-color: var(--gray-100);
+  color: var(--gray-800);
+}
+
+
+.simple-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: white;
+  border: none;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--primary-500);
+
+}
+
+.simple-btn:hover {
+  box-shadow: 0px -1.5px 0px 0px var(--primary-500) inset;
+}
 
 /*First section*/
 
@@ -913,6 +988,7 @@ body{
 .top-category {
   padding: 80px 300px;
   gap: 40px;
+  background-color: white;
   
  
 
@@ -1007,6 +1083,9 @@ body{
 .top-category .more-categories {
   align-items: center;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
 }
 
 .top-category .more-categories p {
