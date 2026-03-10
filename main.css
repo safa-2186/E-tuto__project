@@ -1336,3 +1336,144 @@ footer {
   color: var(--gray-500);
   margin-left: 18px;
 }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 0;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-orange);
+}
+
+.search-bar {
+    display: flex;
+    border: 1px solid var(--border-color);
+    padding: 5px 15px;
+    width: 40%;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-orange { background: var(--primary-orange); color: white; }
+.btn-light { background: var(--light-orange); color: var(--primary-orange); }
+
+/* Breadcrumb */
+.breadcrumb {
+    text-align: center;
+    background: #F5F7FA;
+    padding: 40px 0;
+}
+
+.breadcrumb h1 { font-size: 24px; margin-bottom: 5px; }
+.breadcrumb span { color: var(--text-gray); }
+
+/* Hero */
+.hero { padding: 80px 0; }
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.year-range {
+    font-size: 60px;
+    font-weight: 800;
+    color: #E9EAF0;
+    display: block;
+}
+
+.hero-text h2 {
+    font-size: 40px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+.hero-images {
+    display: flex;
+    gap: 15px;
+}
+
+.img-large { width: 65%; height: 450px; background-size: cover; border-radius: 4px; }
+.img-small { width: 35%; height: 450px; background-size: cover; border-radius: 4px; }
+
+/* Partners */
+.partners { padding-bottom: 80px; }
+.partners-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.logo-card {
+    background: white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    padding: 25px;
+    text-align: center;
+    font-weight: bold;
+    color: #ccc; /* Generic placeholder color */
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.stat-item i {
+    font-size: 32px;
+    color: var(--primary-orange);
+}
+
+.stat-item p {
+    color: var(--text-gray);
+    font-size: 14px;
+}
