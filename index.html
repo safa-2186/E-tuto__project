@@ -3,1040 +3,3117 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-Tutor</title>
-    <link rel="stylesheet" href="main.css" />
+    <title>E-tutor Home</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+        /*COLORS*/
+        /*GRAY*/
+        --color-gray-900: #1d2026;
+        --color-gray-800: #363b47;
+        --color-gray-700: #4e5566;
+        --color-gray-600: #6e7485;
+        --color-gray-500: #8c94a3;
+        --color-gray-400: #a1a5b3;
+        --color-gray-300: #b7bac7;
+        --color-gray-200: #ced1d9;
+        --color-gray-100: #e9eaf0;
+        --color-gray-50: #f5f7fa;
+        --color-white: #ffffff;
+        /*PRIMARY*/
+        --color-primary-900: #33140b;
+        --color-primary-800: #662916;
+        --color-primary-700: #993d20;
+        --color-primary-600: #cc522b;
+        --color-primary-500: #ff6636;
+        --color-primary-400: #ff855e;
+        --color-primary-300: #ffa386;
+        --color-primary-200: #ffddd1;
+        --color-primary-100: #ffeee8;
+        /*SECONDARY*/
+        --color-secondary-900: #111033;
+        --color-secondary-800: #222065;
+        --color-secondary-700: #342f98;
+        --color-secondary-600: #453fca;
+        --color-secondary-500: #564ffd;
+        --color-secondary-400: #7872fd;
+        --color-secondary-300: #9a95fe;
+        --color-secondary-200: #cdcbfe;
+        --color-secondary-100: #ebebff;
+        /*SUCCESS*/
+        --color-success-900: #07260a;
+        --color-success-800: #0e4c14;
+        --color-success-700: #15711f;
+        --color-success-600: #1c9729;
+        --color-success-500: #23bd33;
+        --color-success-400: #4fca5c;
+        --color-success-300: #7bd785;
+        --color-success-200: #c3e5c6;
+        --color-success-100: #e1f7e3;
+        /*warning*/
+        --color-warning-900: #331d06;
+        --color-warning-800: #65390c;
+        --color-warning-700: #985613;
+        --color-warning-600: #cc7319;
+        --color-warning-500: #fd8e1f;
+        --color-warning-400: #fda44c;
+        --color-warning-300: #febb79;
+        --color-warning-200: #fed1a5;
+        --color-warning-100: #fff2e5;
+        /*DANGER*/
+        --color-danger-900: #2d0e0e;
+        --color-danger-800: #5b1b1b;
+        --color-danger-700: #882929;
+        --color-danger-600: #b63636;
+        --color-danger-500: #e34444;
+        --color-danger-400: #e96969;
+        --color-danger-300: #ee8f8f;
+        --color-danger-200: #f4c8c8;
+        --color-danger-100: #fff0f0;
+        /*DISPLAYS*/
+        /* Display/01 (80px) */
+        --text-display-01: 80px;
+        --text-display-01--line-height: 80px;
+        --text-display-01--font-weight: 600;
+        --text-display-01--letter-spacing: -0.02em;
+
+        /* Display/02 (72px) */
+        --text-display-02: 72px;
+        --text-display-02--line-height: 74px;
+        --text-display-02--font-weight: 600;
+        --text-display-02--letter-spacing: -0.02em;
+
+        /* Display/03 (64px) */
+        --text-display-03: 64px;
+        --text-display-03--line-height: 68px;
+        --text-display-03--font-weight: 600;
+        --text-display-03--letter-spacing: -0.02em;
+        /*HEADINGS*/
+        /*HEADING 1*/
+        --text-heading-01: 48px;
+        --text-heading-01--line-height: 52px;
+        --text-heading-01--font-weight: 600;
+        --text-heading-01--letter-spacing: -2%;
+        /*HEADING 2*/
+        --text-heading-02: 40px;
+        --text-heading-02--line-height: 48px;
+        --text-heading-02--font-weight: 600;
+        --text-heading-02--letter-spacing: -1%;
+        /*HEADING 3*/
+        --text-heading-03: 32px;
+        --text-heading-03--line-height: 40px;
+        --text-heading-03--font-weight: 600;
+        --text-heading-03--letter-spacing: -1%;
+        /*HEADING 4*/
+        --text-heading-04: 24px;
+        --text-heading-04--line-height: 32px;
+        --text-heading-04--font-weight: 600;
+        --text-heading-04--letter-spacing: -1%;
+        /*BUTTON-TEXT STYLE*/
+        /*BUTTON-TEXT LARGE*/
+        --text-button-large: 18px;
+        --text-button-large--line-height: 56px;
+        --text-button-large--font-weight: 600;
+        --text-button-large--letter-spacing: -1%;
+        /*BUTTON-TEXT MEDIUM*/
+        --text-button-medium: 16px;
+        --text-button-medium--line-height: 48px;
+        --text-button-medium--font-weight: 600;
+        --text-button-medium--letter-spacing: -0.8%;
+        /*BUTTON-TEXT SMALL*/
+        --text-button-small: 14px;
+        --text-button-small--line-height: 40px;
+        --text-button-small--font-weight: 600;
+        --text-button-small--letter-spacing: -0.4%;
+        /*LABELS*/
+        /*LABEL XXL*/
+        --text-label-xxl: 18px;
+        --text-label-xxl--line-height: 100%;
+        --text-label-xxl--font-weight: 500;
+        --text-label-xxl--letter-spacing: 0px;
+        /*LABEL XL*/
+        --text-label-xl: 16px;
+        --text-label-xl--line-height: 100%;
+        --text-label-xl--font-weight: 500;
+        --text-label-xl--letter-spacing: 0px;
+        /*LABEL LARGE*/
+        --text-label-large: 14px;
+        --text-label-large--line-height: 100%;
+        --text-label-large--font-weight: 500;
+        --text-label-large--letter-spacing: 0px;
+        /*LABEL MEDIUM*/
+        --text-label-medium: 12px;
+        --text-label-medium--line-height: 12px;
+        --text-label-medium--font-weight: 500;
+        --text-label-medium--letter-spacing: 0px;
+        /*LABEL SMALL*/
+        --text-label-small: 10px;
+        --text-label-small--line-height: 12px;
+        --text-label-small--font-weight: 500;
+        --text-label-small--letter-spacing: 0px;
+        /*BODY TEXT */
+        /*BODY XXXL*/
+        --text-body-xxxl: 24px;
+        --text-body-xxxl--line-height: 32px;
+        --text-body-xxxl--font-weight: 400;
+        --text-body-xxxl--letter-spacing: 0%;
+        /*BODY XXL*/
+        /*BODY XXL 400*/
+        --text-body-xxl-400: 20px;
+        --text-body-xxl-400--line-height: 32px;
+        --text-body-xxl-400--font-weight: 400;
+        --text-body-xxl-400--letter-spacing: 0%;
+        /*BODY XXL 500*/
+        --text-body-xxl-500: 20px;
+        --text-body-xxl-500--line-height: 26px;
+        --text-body-xxl-500--font-weight: 500;
+        --text-body-xxl-500--letter-spacing: 0%;
+        /*body xxl 600*/
+        --text-body-xxl-600: 20px;
+        --text-body-xxl-600--line-height: 26px;
+        --text-body-xxl-600--font-weight: 600;
+        --text-body-xxl-600--letter-spacing: 0%;
+        /*BODY XL*/
+        /*BODY XL 400*/
+        --text-body-xl-400: 18px;
+        --text-body-xl-400--line-height: 24px;
+        --text-body-xl-400--font-weight: 400;
+        --text-body-xl-400--letter-spacing: 0%;
+        /*BODY XL 500*/
+        --text-body-xl-500: 18px;
+        --text-body-xl-500--line-height: 24px;
+        --text-body-xl-500--font-weight: 500;
+        --text-body-xl-500--letter-spacing: 0%;
+        /*BODY XL 600*/
+        --text-body-xl-600: 18px;
+        --text-body-xl-600--line-height: 24px;
+        --text-body-xl-600--font-weight: 600;
+        --text-body-xl-600--letter-spacing: 0%;
+        /*BODY LARGE*/
+        /*BODY LARGE 400*/
+        --text-body-large-400: 16px;
+        --text-body-large-400--line-height: 24px;
+        --text-body-large-400--font-weight: 400;
+        --text-body-large-400--letter-spacing: 0%;
+        /*BODY LARGE 500*/
+        --text-body-large-500: 16px;
+        --text-body-large-500--line-height: 22px;
+        --text-body-large-500--font-weight: 500;
+        --text-body-large-500--letter-spacing: 0%;
+        /*BODY LARGE 600*/
+        --text-body-large-600: 16px;
+        --text-body-large-600--line-height: 22px;
+        --text-body-large-600--font-weight: 600;
+        --text-body-large-600--letter-spacing: 0%;
+        /*BODY MEDIUM*/
+        /*BODY MEDIUM 400*/
+        --text-body-medium-400: 14px;
+        --text-body-medium-400--line-height: 22px;
+        --text-body-medium-400--font-weight: 400;
+        --text-body-medium-400--letter-spacing: -1%;
+        /*BODY MEDIUM 500*/
+        --text-body-medium-500: 14px;
+        --text-body-medium-500--line-height: 20px;
+        --text-body-medium-500--font-weight: 500;
+        --text-body-medium-500--letter-spacing: -1%;
+        /*BODY MEDIUM 600*/
+        --text-body-medium-600: 14px;
+        --text-body-medium-600--line-height: 20px;
+        --text-body-medium-600--font-weight: 600;
+        --text-body-medium-600--letter-spacing: -1%;
+        /*BODY SMALL*/
+        /*BODY SMALL 400*/
+        --text-body-small-400: 12px;
+        --text-body-small-400--line-height: 16px;
+        --text-body-small-400--font-weight: 400;
+        --text-body-small-400--letter-spacing: 0%;
+        /*BODY SMALL 500*/
+        --text-body-small-500: 12px;
+        --text-body-small-500--line-height: 16px;
+        --text-body-small-500--font-weight: 500;
+        --text-body-small-500--letter-spacing: 0%;
+        /*BODY SMALL 600*/
+        --text-body-small-600: 12px;
+        --text-body-small-600--line-height: 16px;
+        --text-body-small-600--font-weight: 600;
+        --text-body-small-600--letter-spacing: 0%;
+        /*BODY TINY*/
+        /*BODY TINY 400*/
+        --text-body-tiny-400: 10px;
+        --text-body-tiny-400--line-height: 10px;
+        --text-body-tiny-400--font-weight: 400;
+        --text-body-tiny-400--letter-spacing: 0%;
+        /*BODY TINY 500*/
+        --text-body-tiny-500: 10px;
+        --text-body-tiny-500--line-height: 10px;
+        --text-body-tiny-500--font-weight: 500;
+        --text-body-tiny-500--letter-spacing: 0%;
+        /*BODY TINY 600*/
+        --text-body-tiny-600: 10px;
+        --text-body-tiny-600--line-height: 10px;
+        --text-body-tiny-600--font-weight: 600;
+        --text-body-tiny-600--letter-spacing: 0%;
+        /*BUTTONS*/
+        /* BUTTONS PRIMARY*/
+        /*BUTTONS PRIMARY-PRIMARY*/
+        --color-btn-primary-primary: var(--color-primary-500);
+        --color-btn-primary-primary-hover: var(--color-primary-600);
+        --color-btn-primary-primary-disabled: var(--color-primary-200);
+        /*BUTTONS PRIMARY-SECONDARY*/
+        --color-btn-primary-secondary: var(--color-secondary-500);
+        --color-btn-primary-secondary-hover: var(--color-secondary-600);
+        --color-btn-primary-secondary-disabled: var(--color-secondary-200);
+        /*BUTTONS PRIMARY-GRAY*/
+        --color-btn-primary-gray: var(--color-gray-900);
+        --color-btn-primary-gray-hover: var(--color-gray-800);
+        --color-btn-primary-gray-disabled: var(--color-gray-200);
+        /*BUTTONS SECONDARY-PRIMARY*/
+        --color-btn-secondary-primary: var(--color-primary-100);
+        --color-btn-secondary-primary-hover: var(--color-primary-200);
+        --color-btn-secondary-primary-disabled: var(--color-primary-100);
+        /*BUTTONS SECONDARY-SECONDARY*/
+        --color-btn-secondary-secondary: var(--color-secondary-100);
+        --color-btn-secondary-secondary-hover: var(--color-secondary-200);
+        --color-btn-secondary-secondary-disabled: var(--color-secondary-100);
+        /*BUTTONS SECONDARY-GRAY*/
+        --color-btn-secondary-gray: var(--color-gray-50);
+        --color-btn-secondary-gray-hover: var(--color-gray-100);
+        --color-btn-secondary-gray-disabled: var(--color-gray-50);
+        /*BUTTONS TERTIARY-PRIMARY*/
+        --color-btn-tertiary-primary: var(--color-white);
+        --color-btn-tertiary-primary-hover: var(--color-primary-100);
+        --color-btn-tertiary-primary-disabled: var(--color-white);
+        /*BUTTONS TERTIARY-SECONDARY*/
+        --color-btn-tertiary-secondary: var(--color-white);
+        --color-btn-tertiary-secondary-hover: var(--color-secondary-100);
+        --color-btn-tertiary-secondary-disabled: var(--color-white);
+        /*BUTTONS TERTIARY-GRAY*/
+        --color-btn-tertiary-gray: var(--color-gray-50);
+        --color-btn-tertiary-gray-hover: var(--color-gray-100);
+        --color-btn-tertiary-gray-disabled: var(--color-gray-50);
+      }
+      @layer base {
+        body {
+          font-family: var(--font-sans);
+          @apply text-gray-900 antialiased;
+        }
+      }
+      @layer components {
+        .btn-primary {
+          background-color: var(--color-btn-primary-primary);
+          color: var(--color-white);
+        }
+        .btn-primary:hover {
+          background-color: var(--color-btn-primary-primary-hover);
+        }
+        .btn-primary:disabled {
+          background-color: var(--color-btn-primary-primary-disabled);
+          cursor: not-allowed;
+        }
+        .btn-secondary {
+          background-color: var(--color-btn-secondary-primary);
+          color: var(--color-gray-900);
+        }
+        .btn-secondary:hover {
+          background-color: var(--color-btn-secondary-primary-hover);
+        }
+        .btn-secondary:disabled {
+          background-color: var(--color-btn-secondary-primary-disabled);
+          cursor: not-allowed;
+        }
+      }
+    </style>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
-
-
   <body>
-
-    <!--Navigation-->
-    <header>
-      <nav class="top-nav">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Courses</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Become an Instructor</a></li>
-        </ul>
-
-        <div class="usd-eng">
-          <div class="usd">
-            <div class="usd">USD</div>
-            <img src="assets/imgs/ChevronDown.svg" alt="ChevronDown" />
-          </div>
-
-          <div class="eng">
-            <div class="eng">English</div>
-            <img src="assets/imgs/ChevronDown.svg" alt="ChevronDown" />
+    <header class="w-full font-sans">
+      <div class="bg-gray-900 text-gray-300 h-12">
+        <div class="mx-auto flex justify-between items-center px-[36px] h-full">
+          <nav class="flex gap-6 text-body-md h-full items-stretch">
+            <a href="#" class="relative text-white flex items-center"
+              ><span
+                class="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-[3px] bg-primary-500"
+              ></span
+              >Home</a
+            >
+            <a
+              href="#"
+              class="hover:text-white transition-colors h-full flex items-center"
+              >Courses</a
+            >
+            <a
+              href="#"
+              class="hover:text-white transition-colors h-full flex items-center"
+              >About</a
+            >
+            <a
+              href="#"
+              class="hover:text-white transition-colors h-full flex items-center"
+              >Contact</a
+            >
+            <a
+              href="#"
+              class="hover:text-white transition-colors h-full flex items-center"
+              >Become an Instructor</a
+            >
+          </nav>
+          <div class="flex gap-4 text-body-md items-center">
+            <select
+              class="bg-transparent cursor-pointer hover:text-white outline-none"
+            >
+              <option>USD</option>
+            </select>
+            <select
+              class="bg-transparent cursor-pointer hover:text-white outline-none"
+            >
+              <option>English</option>
+            </select>
           </div>
         </div>
-      </nav>
+      </div>
 
-      <nav class="first-nav">
-        <div class="left">
-          <div class="logo">
-            <img src="assets/icons/GraduationCap.svg" alt="logo" />
-            <h1>E-tutor</h1>
-          </div>
-
-          <div class="category-search">
-            <div class="category">
-              <span>Browse</span>
-              <img src="assets/imgs/ChevronDown-browse.svg" alt="ChevronDown" />
+      <div class="bg-white border-b border-gray-100 py-4">
+        <div class="mx-auto flex justify-between items-center px-[36px] gap-8">
+          <div class="flex items-center gap-8">
+            <div
+              class="flex items-center gap-2 cursor-pointer"
+              href="test-page1.html"
+            >
+              <img
+                src="assets/icons/GraduationCap.svg"
+                alt="E-tutor"
+                class="h-8"
+              />
+              <span class="text-heading-03 text-gray-900">E-tutor</span>
             </div>
-            <div class="search">
-              <img src="assets/icons/MagnifyingGlass.svg" alt="search" />
-              <span>What do you want learn...</span>
+
+            <div class="flex items-center gap-[16px]">
+              <div class="relative">
+                <select
+                  class="border border-gray-100 px-4 py-2 rounded text-body-lg outline-none cursor-pointer"
+                >
+                  <option>Browse</option>
+                </select>
+              </div>
+            </div>
+            <div class="flex-1 max-w-2xl relative">
+              <span
+                class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </span>
+              <input
+                type="text"
+                placeholder="What do you want learn..."
+                class="w-full border border-gray-100 py-2 pl-12 pr-4 rounded text-body-lg focus:border-primary-500 outline-none"
+              />
+            </div>
+          </div>
+
+          <div class="flex items-center gap-6">
+            <div class="flex gap-4">
+              <button class="group p-2 cursor-pointer">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="text-gray-900 group-hover:text-primary-500 transition-colors"
+                >
+                  <path
+                    d="M5.26904 9.75C5.2678 8.86051 5.44262 7.97957 5.78343 7.15796C6.12424 6.33635 6.6243 5.59031 7.25477 4.96286C7.88525 4.33541 8.63368 3.83895 9.45693 3.5021C10.2802 3.16525 11.1619 2.99467 12.0514 3.00019C15.763 3.02778 18.7317 6.11282 18.7317 9.83474V10.5C18.7317 13.8577 19.4342 15.8062 20.0529 16.8711C20.1196 16.9849 20.1551 17.1142 20.1558 17.2461C20.1565 17.378 20.1224 17.5077 20.0569 17.6222C19.9915 17.7367 19.8971 17.8319 19.7831 17.8982C19.6691 17.9646 19.5397 17.9997 19.4078 18H4.59222C4.46034 17.9997 4.33087 17.9645 4.21689 17.8982C4.1029 17.8318 4.00844 17.7366 3.94301 17.6221C3.87759 17.5076 3.84352 17.3778 3.84425 17.2459C3.84498 17.1141 3.88048 16.9847 3.94716 16.8709C4.56622 15.806 5.26904 13.8575 5.26904 10.5L5.26904 9.75Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+
+                  <path
+                    d="M9 18V18.75C9 19.5456 9.31607 20.3087 9.87868 20.8713C10.4413 21.4339 11.2044 21.75 12 21.75C12.7956 21.75 13.5587 21.4339 14.1213 20.8713C14.6839 20.3087 15 19.5456 15 18.75V18"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <button class="group p-2 cursor-pointer">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="text-gray-900 group-hover:text-primary-500 transition-colors"
+                >
+                  <path
+                    d="M12 20.25C12 20.25 2.625 15 2.625 8.625C2.62519 7.49825 3.01561 6.40634 3.72989 5.53492C4.44416 4.6635 5.4382 4.06635 6.54299 3.84501C7.64778 3.62366 8.79514 3.79178 9.78999 4.32078C10.7848 4.84978 11.5658 5.70701 12 6.74672L12 6.74673C12.4342 5.70701 13.2152 4.84979 14.21 4.32078C15.2049 3.79178 16.3522 3.62366 17.457 3.84501C18.5618 4.06635 19.5558 4.6635 20.2701 5.53492C20.9844 6.40634 21.3748 7.49825 21.375 8.625C21.375 15 12 20.25 12 20.25Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <button class="group p-2 cursor-pointer">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="text-gray-900 group-hover:text-primary-500 transition-colors"
+                >
+                  <path
+                    d="M7.5 19.5C7.91421 19.5 8.25 19.8358 8.25 20.25C8.25 20.6642 7.91421 21 7.5 21C7.08579 21 6.75 20.6642 6.75 20.25C6.75 19.8358 7.08579 19.5 7.5 19.5Z"
+                    fill="#1D2026"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M17.25 21.75C18.0784 21.75 18.75 21.0784 18.75 20.25C18.75 19.4216 18.0784 18.75 17.25 18.75C16.4216 18.75 15.75 19.4216 15.75 20.25C15.75 21.0784 16.4216 21.75 17.25 21.75Z"
+                    fill="#1D2026"
+                  />
+                  <path
+                    d="M3.96429 6.75H20.7857L18.3108 15.4121C18.2213 15.7255 18.0321 16.0012 17.7718 16.1975C17.5116 16.3938 17.1945 16.5 16.8685 16.5H7.88145C7.55549 16.5 7.23839 16.3938 6.97816 16.1975C6.71792 16.0012 6.52872 15.7255 6.43917 15.4121L3.04827 3.54396C3.0035 3.38725 2.90889 3.24939 2.77878 3.15124C2.64866 3.05309 2.49011 3 2.32713 3H0.75"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="flex gap-3">
+              <button
+                class="btn-secondary px-6 py-2.5 bg-primary-100 text-primary-500 hover:bg-primary-200 transition-colors cursor-pointer"
+              >
+                Create Account
+              </button>
+              <button
+                class="btn-primary px-8 py-2.5 bg-primary-500 text-white hover:bg-primary-600 transition-colors cursor-pointer"
+              >
+                Sign In
+              </button>
             </div>
           </div>
         </div>
-
-        <div class="right">
-          <div class="icons">
-            <img src="assets/icons/Bell.svg" alt="bell" />
-            <img src="assets/icons/Heart.svg" alt="heart" />
-            <img src="assets/icons/ShoppingCartSimple.svg" alt="shoppingcart" />
-          </div>
-          <div class="buttons">
-            <button class="btn-secondary-primary">Create Account</button>
-            <button class="btn-primary-primary">Sign In</button>
-          </div>
-        </div>
-      </nav>
-      
+      </div>
     </header>
-
-    <!--First section-->
-
-    <section class="hero">
-      <div class="content">
-        <h1>Learn with expert anytime anywhere</h1>
-        <p>
-          Our mision is to help people to find the best course online and learn
+    <!--  Hero Section  -->
+    <section
+      class="mx-auto flex flex-col md:flex-row items-center bg-gray-50 pl-[300px]"
+    >
+      <div class="w-full md:w-1/2 px-4 py-12 md:py-20">
+        <h1 class="text-gray-900 text-display-02">
+          Learn with expert <br />
+          anytime anywhere
+        </h1>
+        <p class="text-gray-600 text-body-xxxl mt-9 max-w-[648px]">
+          Our mission is to help people to find the best course online and learn
           with expert anytime, anywhere.
         </p>
-        <button class="btn-primary-primary">Create Account</button>
-      </div>
-      <div class="image-box">
-        <img src="assets/imgs/hero-image.png" alt="heroimage" />
-      </div>
-    </section>
-
-    <!--Category section-->
-
-    <section class="top-category">
-      <h2>Browse top category</h2>
-
-      <div class="container">
-        <div class="collection secondary">
-          <img src="assets/icons/Frame 145.svg" alt="" />
-          <div class="content">
-            <h3>Label</h3>
-            <p>63,476 Courses</p>
-          </div>
-        </div>
-
-        <div class="collection success">
-          <img src="assets/icons/Frame 145 (1).svg" alt="" />
-          <div class="content">
-            <h3>Business</h3>
-            <p>52,822 Courses</p>
-          </div>
-        </div>
-
-        <div class="collection warning">
-          <img src="assets/icons/Frame 145 (2).svg" alt="" />
-          <div class="content">
-            <h3>Finance & Accounting</h3>
-            <p>33,841 Courses</p>
-          </div>
-        </div>
-
-        <div class="collection error">
-          <img src="assets/icons/Frame 145 (3).svg" alt="" />
-          <div class="content">
-            <h3>IT & Software</h3>
-            <p>22,649 Courses</p>
-          </div>
-        </div>
-
-        <div class="collection white">
-          <img src="assets/icons/Frame 145 (4).svg" alt="" />
-          <div class="content">
-            <h3>Personal Development</h3>
-            <p>20,126 Courses</p>
-          </div>
-        </div>
-
-        <div class="collection gray">
-          <img src="assets/icons/Frame 145 (5).svg" alt="" />
-          <div class="content">
-            <h3>Office Productivity</h3>
-            <p>13,932 Courses</p>
-          </div>
-        </div>
-
-        <div class="collection secondary">
-          <img src="assets/icons/Frame 145 (6).svg" alt="" />
-          <div class="content">
-            <h3>Marketing</h3>
-            <p>12,068 Courses</p>
-          </div>
-        </div>
-
-        <div class="collection gray">
-          <img src="assets/icons/Frame 145 (7).svg" alt="" />
-          <div class="content">
-            <h3>Photography & Video</h3>
-            <p>6,196 Courses</p>
-          </div>
-        </div>
-
-        <div class="collection warning">
-          <img src="assets/icons/Frame 145 (8).svg" alt="" />
-          <div class="content">
-            <h3>Lifestyle</h3>
-            <p>2,736 Courses</p>
-          </div>
-        </div>
-
-        <div class="collection primary">
-          <img src="assets/icons/Frame 145 (9).svg" alt="" />
-          <div class="content">
-            <h3>Design</h3>
-            <p>2,600 Courses</p>
-          </div>
-        </div>
-
-        <div class="collection success">
-          <img src="assets/icons/Frame 145 (10).svg" alt="" />
-          <div class="content">
-            <h3>Health & Fitness</h3>
-            <p>1,678 Courses</p>
-          </div>
-        </div>
-
-        <div class="collection warning">
-          <img src="assets/icons/Frame 145 (11).svg" alt="" />
-          <div class="content">
-            <h3>Music</h3>
-            <p>959 Courses</p>
-          </div>
-        </div>
+        <button
+          class="text-button-large btn-primary mt-8 px-[32px] transition-colors cursor-pointer"
+        >
+          Create Account
+        </button>
       </div>
 
-      <div class="more-categories">
-        <p>We have more category & subcategory.</p>
-        <button class="simple-btn">Browse All <img src="assets/icons/ArrowRight (1).svg" alt="arrow"></button>
+      <div class="w-full md:w-1/2 h-full min-h-[500px] relative">
+        <img
+          src="assets/imgs/first pic.jpg"
+          alt="Expert learning"
+          class="absolute inset-0 w-full h-full object-cover [clip-path:polygon(20%_0%,100%_0%,100%_100%,0%_100%)]"
+        />
       </div>
     </section>
+    <!-- top category section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-[1320px] mx-auto px-6">
+        <h2 class="text-heading-02 text-center text-gray-900 mb-6">
+          Browse top category
+        </h2>
 
-    <section class="selling-courses">
-      <div class="selling-courses-content container">
-        <h1 class="selling-courses-h1">Best selling courses</h1>
-        <div class="selling-courses-cards">
-          <div class="course-card">
-            <img
-              src="assets/imgs/fstcardimage.png"
-              alt="Course Image"
-              class="course-img"
-            />
-
-            <div class="course-body">
-              <div class="top-row">
-                <span class="category-red">DESIGN</span>
-                <span class="price">$57</span>
-              </div>
-
-              <h3 class="course-title">
-                Machine Learning A-Z™: Hands-On Python & R In Data...
-              </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div
+            class="flex items-center p-5 bg-secondary-100 transition-all hover:shadow-md cursor-pointer"
+          >
+            <div
+              class="w-14 h-14 bg-white flex items-center justify-center shrink-0"
+            >
+              <svg
+                width="64"
+                height="64"
+                viewBox="0 0 64 64"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="64" height="64" fill="white" />
+                <path
+                  opacity="0.2"
+                  d="M41 22H23C22.8687 22 22.7386 22.0259 22.6173 22.0761C22.496 22.1264 22.3857 22.2 22.2929 22.2929C22.2 22.3857 22.1264 22.496 22.0761 22.6173C22.0259 22.7386 22 22.8687 22 23V41C22 41.1313 22.0259 41.2614 22.0761 41.3827C22.1264 41.504 22.2 41.6143 22.2929 41.7071C22.3857 41.8 22.496 41.8736 22.6173 41.9239C22.7386 41.9741 22.8687 42 23 42H41C41.1313 42 41.2614 41.9741 41.3827 41.9239C41.504 41.8736 41.6143 41.8 41.7071 41.7071C41.8 41.6143 41.8736 41.504 41.9239 41.3827C41.9741 41.2614 42 41.1313 42 41V23C42 22.8687 41.9741 22.7386 41.9239 22.6173C41.8736 22.496 41.8 22.3857 41.7071 22.2929C41.6143 22.2 41.504 22.1264 41.3827 22.0761C41.2614 22.0259 41.1313 22 41 22ZM35.5 35.5H28.5V28.5H35.5V35.5Z"
+                  fill="#564FFD"
+                />
+                <path
+                  d="M35.5 28.5H28.5V35.5H35.5V28.5Z"
+                  stroke="#564FFD"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M41 22H23C22.4477 22 22 22.4477 22 23V41C22 41.5523 22.4477 42 23 42H41C41.5523 42 42 41.5523 42 41V23C42 22.4477 41.5523 22 41 22Z"
+                  stroke="#564FFD"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M42 29H45"
+                  stroke="#564FFD"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M42 35H45"
+                  stroke="#564FFD"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M19 29H22"
+                  stroke="#564FFD"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M19 35H22"
+                  stroke="#564FFD"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M35 42V45"
+                  stroke="#564FFD"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M29 42V45"
+                  stroke="#564FFD"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M35 19V22"
+                  stroke="#564FFD"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M29 19V22"
+                  stroke="#564FFD"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </div>
-
-            <div class="course-footer">
-              <div class="rating">
-                <span class="star">★</span>
-                <span>5.0</span>
-              </div>
-              <div class="students">
-                <span style="color: #4e5566">265.7K </span>students
-              </div>
-            </div>
-          </div>
-          <div class="course-card">
-            <img
-              src="assets/imgs/2cardimage.png"
-              alt="Course Image"
-              class="course-img"
-            />
-
-            <div class="course-body">
-              <div class="top-row">
-                <span class="category-blue">DEVELOPMENTS</span>
-                <span class="price">$57</span>
-              </div>
-
-              <h3 class="course-title">
-                The Complete 2021 Web Development Bootcamp
-              </h3>
-            </div>
-
-            <div class="course-footer">
-              <div class="rating">
-                <span class="star">★</span>
-                <span>5.0</span>
-              </div>
-              <div class="students">
-                <span style="color: #4e5566">265.7K </span>students
-              </div>
-            </div>
-          </div>
-          <div class="course-card">
-            <img
-              src="assets/imgs/3cardimage.png"
-              alt="Course Image"
-              class="course-img"
-            />
-
-            <div class="course-body">
-              <div class="top-row">
-                <span class="category-green">BUSINESS</span>
-                <span class="price">$57</span>
-              </div>
-
-              <h3 class="course-title">Learn Python Programming Masterclass</h3>
-            </div>
-
-            <div class="course-footer">
-              <div class="rating">
-                <span class="star">★</span>
-                <span>5.0</span>
-              </div>
-              <div class="students">
-                <span style="color: #4e5566">265.7K </span>students
-              </div>
-            </div>
-          </div>
-          <div class="course-card">
-            <img
-              src="assets/imgs/4cardimage.png"
-              alt="Course Image"
-              class="course-img"
-            />
-
-            <div class="course-body">
-              <div class="top-row">
-                <span class="category-blue">MARKETING</span>
-                <span class="price">$57</span>
-              </div>
-
-              <h3 class="course-title">
-                The Complete Digital Marketing Course - 12 Courses in 1
-              </h3>
-            </div>
-
-            <div class="course-footer">
-              <div class="rating">
-                <span class="star">★</span>
-                <span>5.0</span>
-              </div>
-              <div class="students">
-                <span style="color: #4e5566">265.7K </span>students
-              </div>
+            <div class="ml-4">
+              <h3 class="text-body-large-500 text-gray-900">Label</h3>
+              <p class="text-body-medium-400 text-gray-600">63,476 Courses</p>
             </div>
           </div>
-          <div class="course-card">
-            <img
-              src="assets/imgs/5cardimage.png"
-              alt="Course Image"
-              class="course-img"
-            />
-
-            <div class="course-body">
-              <div class="top-row">
-                <span class="category-red">IT & SOFTWARE</span>
-                <span class="price">$57</span>
-              </div>
-
-              <h3 class="course-title">
-                Reiki Level I, II and Master/Teacher Program
-              </h3>
+          <div
+            class="flex items-center p-5 bg-success-100 transition-all hover:shadow-md cursor-pointer"
+          >
+            <div
+              class="w-14 h-14 bg-white flex items-center justify-center shrink-0"
+            >
+              <svg
+                width="64"
+                height="64"
+                viewBox="0 0 64 64"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="64" height="64" fill="white" />
+                <path
+                  opacity="0.2"
+                  d="M41 35.1077L36.4004 39.7073C36.2783 39.8294 36.1266 39.9178 35.9602 39.9639C35.7938 40.01 35.6182 40.0122 35.4507 39.9703L28.2061 38.1592C28.0702 38.1252 27.943 38.0631 27.8326 37.9768L21 32.6339L25.0718 24.9737L31.4868 23.1035C31.716 23.0367 31.9614 23.0541 32.1789 23.1525L36.5 25.1077H33.9142C33.7829 25.1077 33.6529 25.1335 33.5315 25.1838C33.4102 25.234 33.3 25.3077 33.2071 25.4006L28.3153 30.2924C28.214 30.3937 28.1356 30.5156 28.0855 30.6498C28.0354 30.784 28.0148 30.9274 28.0249 31.0704C28.0351 31.2133 28.0758 31.3523 28.1444 31.4781C28.213 31.6039 28.3078 31.7135 28.4224 31.7995L29.1 32.3077C29.7924 32.827 30.6345 33.1077 31.5 33.1077C32.3655 33.1077 33.2076 32.827 33.9 32.3077L35.5 31.1077L41 35.1077Z"
+                  fill="#23BD33"
+                />
+                <path
+                  d="M46.0897 31.2231L43 32.7679L39 25.1077L42.1212 23.5471C42.3557 23.4299 42.6268 23.4094 42.8763 23.4901C43.1257 23.5708 43.3335 23.7463 43.4548 23.9787L46.5289 29.8658C46.5904 29.9835 46.6278 30.1123 46.639 30.2446C46.6501 30.377 46.6348 30.5102 46.5939 30.6365C46.553 30.7629 46.4874 30.8798 46.4008 30.9805C46.3142 31.0812 46.2085 31.1637 46.0897 31.2231V31.2231Z"
+                  stroke="#23BD33"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M21 32.634L17.9103 31.0891C17.7915 31.0297 17.6858 30.9473 17.5992 30.8466C17.5126 30.7459 17.447 30.6289 17.4061 30.5026C17.3652 30.3762 17.3499 30.243 17.3611 30.1107C17.3722 29.9783 17.4096 29.8495 17.4711 29.7318L20.5452 23.8447C20.6666 23.6123 20.8743 23.4368 21.1238 23.3561C21.3732 23.2754 21.6444 23.2959 21.8789 23.4131L25 24.9737L21 32.634Z"
+                  stroke="#23BD33"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M43 32.7679L41 35.1077L36.4004 39.7073C36.2783 39.8294 36.1266 39.9178 35.9602 39.9639C35.7938 40.01 35.6182 40.0123 35.4507 39.9704L28.2061 38.1592C28.0702 38.1252 27.943 38.0631 27.8326 37.9768L21 32.634"
+                  stroke="#23BD33"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M41 35.1077L35.5 31.1077L33.9 32.3077C33.2076 32.827 32.3655 33.1077 31.5 33.1077C30.6345 33.1077 29.7924 32.827 29.1 32.3077L28.4224 31.7995C28.3078 31.7136 28.213 31.604 28.1444 31.4782C28.0758 31.3524 28.0351 31.2133 28.0249 31.0704C28.0148 30.9275 28.0354 30.7841 28.0855 30.6499C28.1356 30.5156 28.214 30.3937 28.3153 30.2924L33.2071 25.4006C33.3 25.3078 33.4102 25.2341 33.5315 25.1838C33.6528 25.1336 33.7829 25.1077 33.9142 25.1077H39"
+                  stroke="#23BD33"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M25.0717 24.9737L31.4867 23.1035C31.7158 23.0367 31.9613 23.0541 32.1788 23.1525L36.4999 25.1077"
+                  stroke="#23BD33"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M30 42.6077L26.2326 41.6658C26.0797 41.6276 25.938 41.5538 25.8191 41.4504L23 39"
+                  stroke="#23BD33"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </div>
-
-            <div class="course-footer">
-              <div class="rating">
-                <span class="star">★</span>
-                <span>5.0</span>
-              </div>
-              <div class="students">
-                <span style="color: #4e5566">265.7K </span>students
-              </div>
-            </div>
-          </div>
-          <div class="course-card">
-            <img
-              src="assets/imgs/6cardimage.png"
-              alt="Course Image"
-              class="course-img"
-            />
-
-            <div class="course-body">
-              <div class="top-row">
-                <span class="category-red">MUSIC</span>
-                <span class="price">$57</span>
-              </div>
-
-              <h3 class="course-title">
-                The Complete Foundation Stock Trading Course
-              </h3>
-            </div>
-
-            <div class="course-footer">
-              <div class="rating">
-                <span class="star">★</span>
-                <span>5.0</span>
-              </div>
-              <div class="students">
-                <span style="color: #4e5566">265.7K </span>students
-              </div>
-            </div>
-          </div>
-          <div class="course-card">
-            <img
-              src="assets/imgs/7cardimage.png"
-              alt="Course Image"
-              class="course-img"
-            />
-
-            <div class="course-body">
-              <div class="top-row">
-                <span class="category-blue">MARKETING</span>
-                <span class="price">$57</span>
-              </div>
-
-              <h3 class="course-title">
-                Beginner to Pro in Excel: Financial Modeling and Valuati...
-              </h3>
-            </div>
-
-            <div class="course-footer">
-              <div class="rating">
-                <span class="star">★</span>
-                <span>5.0</span>
-              </div>
-              <div class="students">
-                <span style="color: #4e5566">265.7K </span>students
-              </div>
+            <div class="ml-4">
+              <h3 class="text-body-large-500 text-gray-900">Business</h3>
+              <p class="text-body-medium-400 text-gray-600">52,822 Courses</p>
             </div>
           </div>
-          <div class="course-card">
-            <img
-              src="assets/imgs/8cardimage.png"
-              alt="Course Image"
-              class="course-img"
-            />
-
-            <div class="course-body">
-              <div class="top-row">
-                <span class="category-green">HEALTH & FITNESS</span>
-                <span class="price">$57</span>
-              </div>
-
-              <h3 class="course-title">
-                The Python Mega Course: Build 10 Real World Applications
-              </h3>
+          <div
+            class="flex items-center p-5 bg-warning-100 transition-all hover:shadow-md cursor-pointer"
+          >
+            <div
+              class="w-14 h-14 bg-white flex items-center justify-center shrink-0"
+            >
+              <svg
+                width="64"
+                height="64"
+                viewBox="0 0 64 64"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="64" height="64" fill="white" />
+                <path
+                  opacity="0.2"
+                  d="M18.9993 28.1065H44.9993L45.0001 40C45.0001 40.2652 44.8947 40.5195 44.7072 40.7071C44.5196 40.8946 44.2653 41 44.0001 41H20.0001C19.7348 41 19.4805 40.8946 19.293 40.7071C19.1054 40.5195 19.0001 40.2652 19.0001 40L18.9993 28.1065Z"
+                  fill="#FD8E1F"
+                />
+                <path
+                  d="M44 23H20C19.4477 23 19 23.4477 19 24V40C19 40.5523 19.4477 41 20 41H44C44.5523 41 45 40.5523 45 40V24C45 23.4477 44.5523 23 44 23Z"
+                  stroke="#FD8E1F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M36.9994 37H40.9994"
+                  stroke="#FD8E1F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M30.9993 37H32.9993"
+                  stroke="#FD8E1F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M18.9993 28.1065H44.9993"
+                  stroke="#FD8E1F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </div>
-
-            <div class="course-footer">
-              <div class="rating">
-                <span class="star">★</span>
-                <span>5.0</span>
-              </div>
-              <div class="students">
-                <span style="color: #4e5566">265.7K </span>students
-              </div>
+            <div class="ml-4">
+              <h3 class="text-body-large-500 text-gray-900">
+                Finance & Accounting
+              </h3>
+              <p class="text-body-medium-400 text-gray-600">33,841 Courses</p>
             </div>
           </div>
-          <div class="course-card">
-            <img
-              src="assets/imgs/9cardimage.png"
-              alt="Course Image"
-              class="course-img"
-            />
-
-            <div class="course-body">
-              <div class="top-row">
-                <span class="category-red">DESIGN</span>
-                <span class="price">$57</span>
-              </div>
-
-              <h3 class="course-title">
-                Copywriting - Become a Freelance Copywriter, your ow...
-              </h3>
+          <div
+            class="flex items-center p-5 bg-primary-100 transition-all hover:shadow-md cursor-pointer"
+          >
+            <div
+              class="w-14 h-14 bg-white flex items-center justify-center shrink-0"
+            >
+              <svg
+                width="64"
+                height="64"
+                viewBox="0 0 64 64"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="64" height="64" fill="white" />
+                <path opacity="0.2" d="M43 29H21V35H43V29Z" fill="#E34444" />
+                <path
+                  d="M21 43V21"
+                  stroke="#E34444"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M21 23H37V29"
+                  stroke="#E34444"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M43 29H21V35H43V29Z"
+                  stroke="#E34444"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M33 35V41H21"
+                  stroke="#E34444"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </div>
-
-            <div class="course-footer">
-              <div class="rating">
-                <span class="star">★</span>
-                <span>5.0</span>
-              </div>
-              <div class="students">
-                <span style="color: #4e5566">265.7K </span>students
-              </div>
+            <div class="ml-4">
+              <h3 class="text-body-large-500 text-gray-900">IT & Software</h3>
+              <p class="text-body-medium-400 text-gray-600">22,649 Courses</p>
             </div>
           </div>
-          <div class="course-card">
-            <img
-              src="assets/imgs/10cardimage.png"
-              alt="Course Image"
-              class="course-img"
-            />
-
-            <div class="course-body">
-              <div class="top-row">
-                <span class="category-red">LIFESTYLE</span>
-                <span class="price">$57</span>
-              </div>
-
-              <h3 class="course-title">
-                Google Analytics Certification - Learn How To Pass The Exam..
-              </h3>
+          <div
+            class="flex items-center shadow-md p-5 bg-white transition-all hover:shadow-lg cursor-pointer"
+          >
+            <div
+              class="w-14 h-14 bg-white flex items-center justify-center shrink-0"
+            >
+              <svg
+                width="64"
+                height="64"
+                viewBox="0 0 64 64"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="64" height="64" fill="#FF6636" />
+                <path
+                  opacity="0.2"
+                  d="M21.9912 32H41.9912V34.5C41.9912 37.1522 40.9376 39.6957 39.0623 41.5711C37.1869 43.4464 34.6434 44.5 31.9912 44.5C29.339 44.5 26.7955 43.4464 24.9201 41.5711C23.0448 39.6957 21.9912 37.1522 21.9912 34.5V32Z"
+                  fill="white"
+                />
+                <path
+                  d="M41.9912 34.5C41.9912 37.1522 40.9376 39.6957 39.0623 41.5711C37.1869 43.4464 34.6434 44.5 31.9912 44.5C29.339 44.5 26.7955 43.4464 24.9201 41.5711C23.0448 39.6957 21.9912 37.1522 21.9912 34.5V29.5C21.9912 26.8478 23.0448 24.3043 24.9201 22.4289C26.7955 20.5536 29.339 19.5 31.9912 19.5C34.6434 19.5 37.1869 20.5536 39.0623 22.4289C40.9376 24.3043 41.9912 26.8478 41.9912 29.5V34.5Z"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M41.9912 32H21.9912"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M35.4912 27C35.7674 27 35.9912 27.2239 35.9912 27.5C35.9912 27.7761 35.7674 28 35.4912 28C35.2151 28 34.9912 27.7761 34.9912 27.5C34.9912 27.2239 35.2151 27 35.4912 27Z"
+                  fill="white"
+                  stroke="white"
+                  stroke-width="2"
+                />
+                <path
+                  d="M28.4912 27C28.7674 27 28.9912 27.2239 28.9912 27.5C28.9912 27.7761 28.7674 28 28.4912 28C28.2151 28 27.9912 27.7761 27.9912 27.5C27.9912 27.2239 28.2151 27 28.4912 27Z"
+                  fill="white"
+                  stroke="white"
+                  stroke-width="2"
+                />
+                <path
+                  d="M22.9912 19.5L25.5305 21.867"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M40.9913 19.5L38.452 21.8671"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </div>
-
-            <div class="course-footer">
-              <div class="rating">
-                <span class="star">★</span>
-                <span>5.0</span>
-              </div>
-              <div class="students">
-                <span style="color: #4e5566">265.7K </span>students
-              </div>
+            <div class="ml-4">
+              <h3 class="text-body-large-500 text-gray-900">
+                Personal Development
+              </h3>
+              <p class="text-body-medium-400 text-gray-600">20,126 Courses</p>
+            </div>
+          </div>
+          <div
+            class="flex items-center p-5 bg-gray-50 transition-all hover:shadow-md cursor-pointer"
+          >
+            <div
+              class="w-14 h-14 bg-white flex items-center justify-center shrink-0"
+            >
+              <svg
+                width="64"
+                height="64"
+                viewBox="0 0 64 64"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="64" height="64" fill="white" />
+                <path
+                  opacity="0.2"
+                  d="M20 42V23C20 22.7348 20.1054 22.4804 20.2929 22.2929C20.4804 22.1054 20.7348 22 21 22H43C43.2652 22 43.5196 22.1054 43.7071 22.2929C43.8946 22.4804 44 22.7348 44 23V42L40 40L36 42L32 40L28 42L24 40L20 42Z"
+                  fill="#1D2026"
+                />
+                <path
+                  d="M25.5 29H38.5"
+                  stroke="#1D2026"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M25.5 33H38.5"
+                  stroke="#1D2026"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M20 42V23C20 22.7348 20.1054 22.4804 20.2929 22.2929C20.4804 22.1054 20.7348 22 21 22H43C43.2652 22 43.5196 22.1054 43.7071 22.2929C43.8946 22.4804 44 22.7348 44 23V42L40 40L36 42L32 40L28 42L24 40L20 42Z"
+                  stroke="#1D2026"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-body-large-500 text-gray-900">
+                Office Productivity
+              </h3>
+              <p class="text-body-medium-400 text-gray-600">13,932 Courses</p>
+            </div>
+          </div>
+          <div
+            class="flex items-center p-5 bg-secondary-100 transition-all hover:shadow-md cursor-pointer"
+          >
+            <div
+              class="w-14 h-14 bg-white flex items-center justify-center shrink-0"
+            >
+              <svg
+                width="64"
+                height="64"
+                viewBox="0 0 64 64"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="64" height="64" fill="white" />
+                <path
+                  opacity="0.2"
+                  d="M21.2793 21.3734C21.1303 21.3299 20.9732 21.3217 20.8204 21.3495C20.6677 21.3773 20.5235 21.4402 20.3993 21.5334C20.2751 21.6265 20.1743 21.7473 20.1049 21.8862C20.0355 22.025 19.9993 22.1781 19.9993 22.3334V39.6667C19.9993 39.822 20.0355 39.9751 20.1049 40.1139C20.1743 40.2528 20.2751 40.3736 20.3993 40.4667C20.5235 40.5599 20.6677 40.6228 20.8204 40.6506C20.9732 40.6783 21.1303 40.6702 21.2793 40.6267L33.0001 37.2082V24.7919L21.2793 21.3734Z"
+                  fill="#564FFD"
+                />
+                <path
+                  d="M19.9993 22.3334V39.6667C19.9993 39.822 20.0355 39.9751 20.1049 40.1139C20.1743 40.2528 20.2751 40.3736 20.3993 40.4667C20.5235 40.5599 20.6677 40.6228 20.8204 40.6506C20.9732 40.6783 21.1303 40.6702 21.2793 40.6267L43.2793 34.21C43.487 34.1495 43.6695 34.0231 43.7993 33.85C43.9291 33.6769 43.9993 33.4664 43.9993 33.25V28.75C43.9993 28.5337 43.9291 28.3231 43.7993 28.15C43.6695 27.9769 43.487 27.8506 43.2793 27.79L21.2793 21.3734C21.1303 21.3299 20.9732 21.3217 20.8204 21.3495C20.6677 21.3773 20.5235 21.4402 20.3993 21.5334C20.2751 21.6265 20.1743 21.7473 20.1049 21.8862C20.0355 22.025 19.9993 22.1781 19.9993 22.3334V22.3334Z"
+                  stroke="#564FFD"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M39 35.4581V40C39 40.2652 38.8946 40.5196 38.7071 40.7071C38.5196 40.8946 38.2652 41 38 41H34C33.7348 41 33.4804 40.8946 33.2929 40.7071C33.1054 40.5196 33 40.2652 33 40V24.7919"
+                  stroke="#564FFD"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-body-large-500 text-gray-900">Marketing</h3>
+              <p class="text-body-medium-400 text-gray-600">12,068 Courses</p>
+            </div>
+          </div>
+          <div
+            class="flex items-center p-5 bg-gray-50 transition-all hover:shadow-md cursor-pointer"
+          >
+            <div
+              class="w-14 h-14 bg-white flex items-center justify-center shrink-0"
+            >
+              <svg
+                width="64"
+                height="64"
+                viewBox="0 0 64 64"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="64" height="64" fill="white" />
+                <path
+                  opacity="0.2"
+                  d="M42 24H37.9993L35.9993 21H27.9993L25.9993 24H22C21.4696 24 20.9609 24.2107 20.5858 24.5858C20.2107 24.9609 20 25.4696 20 26V40C20 40.5304 20.2107 41.0391 20.5858 41.4142C20.9609 41.7893 21.4696 42 22 42H42C42.5304 42 43.0391 41.7893 43.4142 41.4142C43.7893 41.0391 44 40.5304 44 40V26C44 25.4696 43.7893 24.9609 43.4142 24.5858C43.0391 24.2107 42.5304 24 42 24V24ZM32 37C31.11 37 30.24 36.7361 29.4999 36.2416C28.7599 35.7471 28.1831 35.0443 27.8425 34.2221C27.5019 33.3998 27.4128 32.495 27.5865 31.6221C27.7601 30.7492 28.1887 29.9474 28.818 29.318C29.4474 28.6887 30.2492 28.2601 31.1221 28.0865C31.995 27.9128 32.8998 28.0019 33.7221 28.3425C34.5443 28.6831 35.2471 29.2599 35.7416 29.9999C36.2361 30.74 36.5 31.61 36.5 32.5C36.5 33.6935 36.0259 34.8381 35.182 35.682C34.3381 36.5259 33.1935 37 32 37V37Z"
+                  fill="#1D2026"
+                />
+                <path
+                  d="M42 42H22C21.4696 42 20.9609 41.7893 20.5858 41.4142C20.2107 41.0391 20 40.5304 20 40V26C20 25.4696 20.2107 24.9609 20.5858 24.5858C20.9609 24.2107 21.4696 24 22 24H25.9993L27.9993 21H35.9993L37.9993 24H42C42.5304 24 43.0391 24.2107 43.4142 24.5858C43.7893 24.9609 44 25.4696 44 26V40C44 40.5304 43.7893 41.0391 43.4142 41.4142C43.0391 41.7893 42.5304 42 42 42Z"
+                  stroke="#1D2026"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M32 37C34.4853 37 36.5 34.9853 36.5 32.5C36.5 30.0147 34.4853 28 32 28C29.5147 28 27.5 30.0147 27.5 32.5C27.5 34.9853 29.5147 37 32 37Z"
+                  stroke="#1D2026"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-body-large-500 text-gray-900">
+                Photography & Video
+              </h3>
+              <p class="text-body-medium-400 text-gray-600">6,196 Courses</p>
+            </div>
+          </div>
+          <div
+            class="flex items-center p-5 bg-warning-100 transition-all hover:shadow-md cursor-pointer"
+          >
+            <div
+              class="w-14 h-14 bg-white flex items-center justify-center shrink-0"
+            >
+              <svg
+                width="64"
+                height="64"
+                viewBox="0 0 64 64"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="64" height="64" fill="white" />
+                <path
+                  opacity="0.2"
+                  d="M20.1385 25.3271C20.0478 25.481 20 25.6563 20 25.8349V38.1652C20 38.3426 20.0472 38.5169 20.1368 38.67C20.2264 38.8232 20.3551 38.9498 20.5097 39.0368L31.5097 45.2243C31.6594 45.3085 31.8283 45.3527 32 45.3527L32.0013 45.3527L32.1186 32L20.1385 25.3272L20.1385 25.3271Z"
+                  fill="#FD8E1F"
+                />
+                <path
+                  d="M44 38.1651V25.8348C44 25.6574 43.9528 25.4832 43.8632 25.33C43.7736 25.1768 43.6449 25.0503 43.4903 24.9633L32.4903 18.7758C32.3406 18.6916 32.1717 18.6473 32 18.6473C31.8283 18.6473 31.6594 18.6916 31.5097 18.7758L20.5097 24.9633C20.3551 25.0503 20.2264 25.1768 20.1368 25.33C20.0472 25.4832 20 25.6574 20 25.8348V38.1651C20 38.3426 20.0472 38.5168 20.1368 38.67C20.2264 38.8232 20.3551 38.9497 20.5097 39.0367L31.5097 45.2242C31.6594 45.3084 31.8283 45.3526 32 45.3526C32.1717 45.3526 32.3406 45.3084 32.4903 45.2242L43.4903 39.0367C43.6449 38.9497 43.7736 38.8232 43.8632 38.67C43.9528 38.5168 44 38.3426 44 38.1651Z"
+                  stroke="#FD8E1F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M38.1278 35.0639V28.5639L26 21.875"
+                  stroke="#FD8E1F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M43.8621 25.3284L32.1186 32L20.1384 25.3271"
+                  stroke="#FD8E1F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M32.1186 32L32.0013 45.3527"
+                  stroke="#FD8E1F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-body-large-500 text-gray-900">Lifestyle</h3>
+              <p class="text-body-medium-400 text-gray-600">2,736 Courses</p>
+            </div>
+          </div>
+          <div
+            class="flex items-center p-5 bg-primary-100 transition-all hover:shadow-md cursor-pointer"
+          >
+            <div
+              class="w-14 h-14 bg-white flex items-center justify-center shrink-0"
+            >
+              <svg
+                width="64"
+                height="64"
+                viewBox="0 0 64 64"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="64" height="64" fill="white" />
+                <path
+                  opacity="0.2"
+                  d="M31.0008 23.0004L23.5412 25.7977C23.3769 25.8593 23.2317 25.9631 23.1202 26.0986C23.0087 26.2341 22.9348 26.3965 22.9059 26.5696L20.0008 44.0004L37.4315 41.0952C37.6046 41.0664 37.7671 40.9925 37.9026 40.881C38.0381 40.7695 38.1418 40.6243 38.2034 40.46L41.0008 33.0004L31.0008 23.0004ZM30.5001 35.9999C30.0056 35.9999 29.5223 35.8533 29.1111 35.5786C28.7 35.3039 28.3796 34.9135 28.1904 34.4566C28.0011 33.9998 27.9516 33.4972 28.0481 33.0122C28.1446 32.5273 28.3827 32.0818 28.7323 31.7322C29.0819 31.3825 29.5274 31.1444 30.0123 31.048C30.4973 30.9515 31 31.001 31.4568 31.1902C31.9136 31.3795 32.304 31.6999 32.5787 32.111C32.8534 32.5221 33.0001 33.0055 33.0001 33.4999C33.0001 33.8282 32.9354 34.1533 32.8098 34.4566C32.6841 34.76 32.5 35.0356 32.2678 35.2677C32.0357 35.4999 31.7601 35.684 31.4568 35.8096C31.1535 35.9353 30.8284 35.9999 30.5001 35.9999Z"
+                  fill="#FF6636"
+                />
+                <path
+                  d="M30.5 36C31.8807 36 33 34.8807 33 33.5C33 32.1193 31.8807 31 30.5 31C29.1193 31 28 32.1193 28 33.5C28 34.8807 29.1193 36 30.5 36Z"
+                  stroke="#FF6636"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M20.0007 44.0004L28.7322 35.2677"
+                  stroke="#FF6636"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M20.0007 44.0005L37.4314 41.0954C37.6045 41.0665 37.7669 40.9926 37.9024 40.8811C38.0379 40.7696 38.1417 40.6244 38.2033 40.4601L41.0007 33.0005L31.0007 23.0005L23.5411 25.7978C23.3768 25.8595 23.2316 25.9632 23.12 26.0987C23.0085 26.2342 22.9346 26.3967 22.9058 26.5698L20.0007 44.0005Z"
+                  stroke="#FF6636"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M41.0007 33.0005L44.2936 29.7076C44.3864 29.6147 44.4601 29.5045 44.5103 29.3831C44.5606 29.2618 44.5865 29.1318 44.5865 29.0005C44.5865 28.8691 44.5606 28.7391 44.5103 28.6178C44.4601 28.4964 44.3864 28.3862 44.2936 28.2934L35.7078 19.7076C35.5202 19.52 35.2659 19.4147 35.0007 19.4147C34.7355 19.4147 34.4811 19.52 34.2936 19.7076L31.0007 23.0005"
+                  stroke="#FF6636"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-body-large-500 text-gray-900">Design</h3>
+              <p class="text-body-medium-400 text-gray-600">2,600 Courses</p>
+            </div>
+          </div>
+          <div
+            class="flex items-center p-5 bg-success-100 transition-all hover:shadow-md cursor-pointer"
+          >
+            <div
+              class="w-14 h-14 bg-white flex items-center justify-center shrink-0"
+            >
+              <svg
+                width="64"
+                height="64"
+                viewBox="0 0 64 64"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="64" height="64" fill="white" />
+                <path
+                  opacity="0.2"
+                  d="M43.001 25H21.001C20.4487 25 20.001 25.4477 20.001 26V42C20.001 42.5523 20.4487 43 21.001 43H43.001C43.5533 43 44.001 42.5523 44.001 42V26C44.001 25.4477 43.5533 25 43.001 25Z"
+                  fill="#23BD33"
+                />
+                <path
+                  d="M32 30.5V37.5"
+                  stroke="#23BD33"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M35.5 34H28.5"
+                  stroke="#23BD33"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M43.001 25H21.001C20.4487 25 20.001 25.4477 20.001 26V42C20.001 42.5523 20.4487 43 21.001 43H43.001C43.5533 43 44.001 42.5523 44.001 42V26C44.001 25.4477 43.5533 25 43.001 25Z"
+                  stroke="#23BD33"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M37 25V23C37 22.4696 36.7893 21.9609 36.4142 21.5858C36.0391 21.2107 35.5304 21 35 21H29C28.4696 21 27.9609 21.2107 27.5858 21.5858C27.2107 21.9609 27 22.4696 27 23V25"
+                  stroke="#23BD33"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-body-large-500 text-gray-900">
+                Health & Fitness
+              </h3>
+              <p class="text-body-medium-400 text-gray-600">1,678 Courses</p>
+            </div>
+          </div>
+          <div
+            class="flex items-center p-5 bg-warning-100 transition-all hover:shadow-md cursor-pointer"
+          >
+            <div
+              class="w-14 h-14 bg-white flex items-center justify-center shrink-0"
+            >
+              <svg
+                width="64"
+                height="64"
+                viewBox="0 0 64 64"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="64" height="64" fill="white" />
+                <path
+                  opacity="0.2"
+                  d="M20 33V40C20 40.5304 20.2107 41.0391 20.5858 41.4142C20.9609 41.7893 21.4696 42 22 42H24C24.5304 42 25.0391 41.7893 25.4142 41.4142C25.7893 41.0391 26 40.5304 26 40V35C26 34.4696 25.7893 33.9609 25.4142 33.5858C25.0391 33.2107 24.5304 33 24 33H20Z"
+                  fill="#FD8E1F"
+                />
+                <path
+                  opacity="0.2"
+                  d="M40.1821 34H43.1821V40C43.1821 40.2652 43.0767 40.5195 42.8892 40.707C42.7016 40.8946 42.4473 41 42.1821 41H40.1821C39.9169 41 39.6626 40.8946 39.4751 40.707C39.2876 40.5195 39.1821 40.2652 39.1821 40V35C39.1821 34.7348 39.2876 34.4805 39.4751 34.293C39.6626 34.1054 39.9169 34 40.1821 34Z"
+                  fill="#FD8E1F"
+                  stroke="#FD8E1F"
+                  stroke-width="2"
+                />
+                <path
+                  d="M44.182 33H40.182C39.6515 33 39.1428 33.2107 38.7678 33.5858C38.3927 33.9609 38.182 34.4696 38.182 35V40C38.182 40.5304 38.3927 41.0391 38.7678 41.4142C39.1428 41.7893 39.6515 42 40.182 42H42.182C42.7124 42 43.2211 41.7893 43.5962 41.4142C43.9713 41.0391 44.182 40.5304 44.182 40V33ZM44.182 33C44.182 31.4165 43.8686 29.8486 43.2598 28.3868C42.651 26.925 41.759 25.5981 40.635 24.4826C39.5111 23.3672 38.1775 22.4852 36.7111 21.8875C35.2447 21.2899 33.6745 20.9883 32.091 21.0003C30.5075 20.9883 28.9373 21.2899 27.4709 21.8875C26.0045 22.4852 24.6709 23.3672 23.5469 24.4826C22.423 25.5981 21.5309 26.925 20.9222 28.3868C20.3134 29.8486 20 31.4165 20 33V40C20 40.5304 20.2107 41.0391 20.5858 41.4142C20.9609 41.7893 21.4696 42 22 42H24C24.5304 42 25.0391 41.7893 25.4142 41.4142C25.7893 41.0391 26 40.5304 26 40V35C26 34.4696 25.7893 33.9609 25.4142 33.5858C25.0391 33.2107 24.5304 33 24 33H20"
+                  stroke="#FD8E1F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-body-large-500 text-gray-900">Music</h3>
+              <p class="text-body-medium-400 text-gray-600">959 Courses</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="feature-courses">
-      <div class="feature-courses-content container">
-        <div class="feature-courses-text-content">
-          <h1 class="feature-courses-h1">Our featured courses</h1>
-          <p class="feature-courses-p students">
-            Vestibulum sed dolor sed diam mollis maximus vel nec dolor. <br />
-            Donec varius purus et eleifend porta.
-          </p>
-        </div>
-        <div class="feature-grid">
-          <div class="feature-card">
-            <div class="feature-img">
-              <img src="assets/imgs/feature1pic.png" alt="Course Thumbnail" />
-            </div>
-
-            <div class="feature-content">
-              <div class="feature-top">
-                <span class="category-green">HEALTH & FITNESS</span>
-                <div class="feature-price">
-                  <span class="new-price">$14.00</span>
-                  <span class="old-price">$26.00</span>
-                </div>
-              </div>
-
-              <h3 class="feature-title">
-                Investing In Stocks The Complete Course! 13 H...
-              </h3>
-
-              <div class="feature-meta">
-                <div class="instructor">
-                  <img
-                    src="assets/icons/profile iconK.G.jpg"
-                    alt="Kevin Gilbert"
-                    class="avatar"
-                  />
-                  <span>Kevin Gilbert</span>
-                </div>
-                <div class="rating">
-                  <span class="star">★</span>
-                  <span class="score">5.0</span>
-                  <span class="count">(357,914)</span>
-                </div>
-              </div>
-
-              <div class="feature-footer">
-                <div class="footer-item"><span>👤</span> 265.7K students</div>
-                <div class="footer-item"><span>📊</span> Beginner</div>
-                <div class="footer-item"><span>🕒</span> 6 hour</div>
-              </div>
-            </div>
-          </div>
-          <div class="feature-card">
-            <div class="feature-img">
-              <img src="assets/imgs/feature2pic.png" alt="Course Thumbnail" />
-            </div>
-
-            <div class="feature-content">
-              <div class="feature-top">
-                <span class="category-red">PERSONAL DEVELOPMENT</span>
-                <div class="feature-price">
-                  <span class="new-price">$14.00</span>
-                  <span class="old-price">$26.00</span>
-                </div>
-              </div>
-
-              <h3 class="feature-title">
-                Google Analytics Certification - Learn How To...
-              </h3>
-
-              <div class="feature-meta">
-                <div class="instructor">
-                  <img
-                    src="assets/icons/profile iconK.G.jpg"
-                    alt="Kevin Gilbert"
-                    class="avatar"
-                  />
-                  <span>Kevin Gilbert</span>
-                </div>
-                <div class="rating">
-                  <span class="star">★</span>
-                  <span class="score">5.0</span>
-                  <span class="count">(357,914)</span>
-                </div>
-              </div>
-
-              <div class="feature-footer">
-                <div class="footer-item"><span>👤</span> 265.7K students</div>
-                <div class="footer-item"><span>📊</span> Beginner</div>
-                <div class="footer-item"><span>🕒</span> 6 hour</div>
-              </div>
-            </div>
-          </div>
-          <div class="feature-card">
-            <div class="feature-img">
-              <img src="assets/imgs/feature3pic.png" alt="Course Thumbnail" />
-            </div>
-
-            <div class="feature-content">
-              <div class="feature-top">
-                <span class="category-green">PRODUCTIVITY</span>
-                <div class="feature-price">
-                  <span class="new-price">$14.00</span>
-                  <span class="old-price">$26.00</span>
-                </div>
-              </div>
-
-              <h3 class="feature-title" style="color: #ff6636">
-                Adobe XD for Web Design: Essential Principles
-              </h3>
-
-              <div class="feature-meta">
-                <div class="instructor">
-                  <img
-                    src="assets/icons/profile iconK.G.jpg"
-                    alt="Kevin Gilbert"
-                    class="avatar"
-                  />
-                  <span>Kevin Gilbert</span>
-                </div>
-                <div class="rating">
-                  <span class="star">★</span>
-                  <span class="score">5.0</span>
-                  <span class="count">(357,914)</span>
-                </div>
-              </div>
-
-              <div class="feature-footer">
-                <div class="footer-item"><span>👤</span> 265.7K students</div>
-                <div class="footer-item"><span>📊</span> Beginner</div>
-                <div class="footer-item"><span>🕒</span> 6 hour</div>
-              </div>
-            </div>
-          </div>
-          <div class="feature-card">
-            <div class="feature-img">
-              <img src="assets/imgs/feature4pic.png" alt="Course Thumbnail" />
-            </div>
-
-            <div class="feature-content">
-              <div class="feature-top">
-                <span class="category-red">MUSIC</span>
-                <div class="feature-price">
-                  <span class="new-price">$14.00</span>
-                  <span class="old-price">$26.00</span>
-                </div>
-              </div>
-
-              <h3 class="feature-title">
-                The Python Mega Course: Build 10 Real World ...
-              </h3>
-
-              <div class="feature-meta">
-                <div class="instructor">
-                  <img
-                    src="assets/icons/profile iconK.G.jpg"
-                    alt="Kevin Gilbert"
-                    class="avatar"
-                  />
-                  <span>Kevin Gilbert</span>
-                </div>
-                <div class="rating">
-                  <span class="star">★</span>
-                  <span class="score">5.0</span>
-                  <span class="count">(357,914)</span>
-                </div>
-              </div>
-
-              <div class="feature-footer">
-                <div class="footer-item"><span>👤</span> 265.7K students</div>
-                <div class="footer-item"><span>📊</span> Beginner</div>
-                <div class="footer-item"><span>🕒</span> 6 hour</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="recently-added">
-      <div class="container">
-        <h1 class="recently-added-h1">Recently added courses</h1>
-
-        <div class="recently-added-grid">
-          <div class="course-card">
-            <img
-              src="assets/imgs/recentlypic1.png"
-              alt="Course Image"
-              class="course-img"
-            />
-            <div class="course-body">
-              <div class="top-row">
-                <span class="category-red">DESIGN</span>
-                <span class="price">$57</span>
-              </div>
-              <h3 class="course-title">
-                The Python Mega Course: Build 10 Real World Applications
-              </h3>
-            </div>
-            <div class="course-footer">
-              <div class="rating"><span class="star">★</span> 5.0</div>
-              <div class="students">265.7K students</div>
-            </div>
-          </div>
-          <div class="course-card">
-            <img
-              src="assets/imgs/recentlypic2.png"
-              alt="Course Image"
-              class="course-img"
-            />
-            <div class="course-body">
-              <div class="top-row">
-                <span class="category-red">IT & SOFTWARE</span>
-                <span class="price">$57</span>
-              </div>
-              <h3 class="course-title">
-                Facebook Ads & Facebook Marketing MASTERY 2021 Cours...
-              </h3>
-            </div>
-            <div class="course-footer">
-              <div class="rating"><span class="star">★</span> 5.0</div>
-              <div class="students">265.7K students</div>
-            </div>
-          </div>
-          <div class="course-card">
-            <img
-              src="assets/imgs/recentlypic3.png"
-              alt="Course Image"
-              class="course-img"
-            />
-            <div class="course-body">
-              <div class="top-row">
-                <span class="category-blue">DEVELOPEMENTS</span>
-                <span class="price">$57</span>
-              </div>
-              <h3 class="course-title">
-                2021 Complete Python Bootcamp From Zero to Hero in Python
-              </h3>
-            </div>
-            <div class="course-footer">
-              <div class="rating"><span class="star">★</span> 5.0</div>
-              <div class="students">265.7K students</div>
-            </div>
-          </div>
-          <div class="course-card">
-            <img
-              src="assets/imgs/recentlypic4.png"
-              alt="Course Image"
-              class="course-img"
-            />
-            <div class="course-body">
-              <div class="top-row">
-                <span class="category-blue">MARKETING</span>
-                <span class="price">$57</span>
-              </div>
-              <h3 class="course-title">
-                How to get Diamond in soloQ | League of Legends | Season 11
-              </h3>
-            </div>
-            <div class="course-footer">
-              <div class="rating"><span class="star">★</span> 5.0</div>
-              <div class="students">265.7K students</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="browse-btn-container">
-          <a href="#" class="btn-light-primary">
-            Browse All Course <span>→</span>
+        <div class="mt-10 text-body-medium-400 text-center text-gray-600">
+          We have more category & subcategory.
+          <a
+            href="#"
+            class="text-primary-500 font-medium hover:underline inline-flex items-center gap-1"
+          >
+            Browse All
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.125 10H16.875M16.875 10L11.25 4.375M16.875 10L11.25 15.625"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </a>
         </div>
       </div>
     </section>
-
-    <!-- Adam developer section -->
-
-     <section class="instructor-section">
-    <div class="container">
-        <section class="hero-grid">
-          <div class="cta-card orange-bg">
-            <div class="cta-content">
-              <h1>Become an instructor</h1>
-              <p>
-                Instructors from around the world teach millions of students on
-                Udemy. We provide the tools and skills to teach what you love.
-              </p>
-              <a href="#" class="btn-white">Start Teaching &rarr;</a>
-            </div>
-            <div class="cta-image">
+    <!--best selling courses-->
+    <section class="pt-20 pb-[320px] bg-gray-50">
+      <div class="max-w-[1320px] mx-auto px-4">
+        <h2 class="text-heading-02 text-center text-gray-900 mb-6">
+          Best Selling Courses
+        </h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div class="max-w-[244px] bg-white hover:shadow-md transition-shadow">
+            <div class="relative w-full h-[160px]">
               <img
-                src="./assets/imgs/Become an Instructor (1).png"
-                alt="Instructor pointing"
+                src="assets/imgs/fstcardimage.png"
+                alt="Course"
+                class="w-full h-full object-cover"
               />
             </div>
-          </div>
-          <div class="steps-card">
-            <h2>Your teaching & earning steps</h2>
-            <div class="steps-list">
-              <div class="step-item">
-                <span class="step-num one">1</span>
-                <p>Apply to become instructor</p>
-              </div>
-              <div class="step-item">
-                <span class="step-num two">2</span>
-                <p>Build & edit your profile</p>
-              </div>
-              <div class="step-item">
-                <span class="step-num three">3</span>
-                <p>Create your new course</p>
-              </div>
-              <div class="step-item">
-                <span class="step-num four">4</span>
-                <p>Start teaching & earning</p>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        <section class="instructors-section">
-          <div class="section-header">
-            <h2>Top instructor of the month</h2>
-          </div>
+            <div class="p-4">
+              <div class="flex justify-between items-center mb-3">
+                <span
+                  class="bg-primary-100 text-primary-700 text-[10px] font-semibold px-2 py-1 uppercase"
+                >
+                  Design
+                </span>
+                <span class="text-primary-500 font-bold text-lg">$57</span>
+              </div>
 
-          <div class="instructor-grid">
-            <div class="instructor-card">
-              <div class="img-wrapper yellow">
-                <img src="./assets/imgs/Image (11).png" alt="Devon Lane" />
-              </div>
-              <h3>Devon Lane</h3>
-              <span>Senior Developer</span>
-              <hr />
-              <div class="card-footer">
-                <span class="rating">⭐ 4.6</span>
-                <span class="students"><b>854</b> students</span>
-              </div>
-            </div>
-            <div class="instructor-card">
-              <div class="img-wrapper grey">
-                <img src="./assets/imgs/Image (12).png" alt="Darrell Steward" />
-              </div>
-              <h3>Darrell Steward</h3>
-              <span>Digital Product Designer</span>
-              <hr />
-              <div class="card-footer">
-                <span class="rating">⭐ 4.9</span>
-                <span class="students"><b>451,444</b> students</span>
-              </div>
-            </div>
-            <div class="instructor-card">
-              <div class="img-wrapper blue">
-                <img src="./assets/imgs/Image (13).png" alt="Jane Cooper" />
-              </div>
-              <h3>Jane Cooper</h3>
-              <span>UI/UX Designer</span>
-              <hr />
-              <div class="card-footer">
-                <span class="rating">⭐ 4.8</span>
-                <span class="students"><b>435,671</b> students</span>
-              </div>
-            </div>
-            <div class="instructor-card">
-              <div class="img-wrapper purple">
-                <img src="./assets/imgs/Image (14).png" alt="Albert Flores" />
-              </div>
-              <h3>Albert Flores</h3>
-              <span>Adobe Instructor</span>
-              <hr />
-              <div class="card-footer">
-                <span class="rating">⭐ 4.7</span>
-                <span class="students"><b>511,123</b> students</span>
-              </div>
-            </div>
-            <div class="instructor-card">
-              <div class="img-wrapper green">
-                <img src="./assets/imgs/Image (15).png" alt="Kathryn Murphy" />
-              </div>
-              <h3>Kathryn Murphy</h3>
-              <span>Lead Developer</span>
-              <hr />
-              <div class="card-footer">
-                <span class="rating">⭐ 4.2</span>
-                <span class="students"><b>2,711</b> students</span>
+              <h3 class="text-gray-900 text-body-medium-500 mb-4 line-clamp-2">
+                Machine Learning A-Z™: Hands-On Python & R In Data...
+              </h3>
+
+              <div class="border-t border-gray-100 my-4"></div>
+
+              <div class="flex justify-between items-center">
+                <div class="flex items-center gap-1">
+                  <span class="text-orange-400">★</span>
+                  <span class="text-gray-900 font-semibold text-sm">5.0</span>
+                </div>
+                <div class="text-sm">
+                  <span class="text-gray-900 font-medium">265.7K</span>
+                  <span class="text-gray-400">students</span>
+                </div>
               </div>
             </div>
           </div>
-          <p class="bottom-cta">
-            Thousands of students waiting for a instructor.
-            <a href="#">Become Instructor &rarr;</a>
+          <div class="max-w-[244px] bg-white hover:shadow-md transition-shadow">
+            <div class="relative w-full h-[160px]">
+              <img
+                src="assets/imgs/2cardimage.png"
+                alt="Course"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="p-4">
+              <div class="flex justify-between items-center mb-3">
+                <span
+                  class="bg-secondary-100 text-secondary-700 text-[10px] font-semibold px-2 py-1 uppercase"
+                >
+                  DEVELLOPEMENT
+                </span>
+                <span class="text-primary-500 font-bold text-lg">$57</span>
+              </div>
+
+              <h3 class="text-gray-900 text-body-medium-500 mb-4 line-clamp-2">
+                The Complete 2021 Web Development Bootcamp
+              </h3>
+
+              <div class="border-t border-gray-100 my-4"></div>
+
+              <div class="flex justify-between items-center">
+                <div class="flex items-center gap-1">
+                  <span class="text-orange-400">★</span>
+                  <span class="text-gray-900 font-semibold text-sm">5.0</span>
+                </div>
+                <div class="text-sm">
+                  <span class="text-gray-900 font-medium">265.7K</span>
+                  <span class="text-gray-400">students</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="max-w-[244px] bg-white hover:shadow-md transition-shadow">
+            <div class="relative w-full h-[160px]">
+              <img
+                src="assets/imgs/3cardimage.png"
+                alt="Course"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="p-4">
+              <div class="flex justify-between items-center mb-3">
+                <span
+                  class="bg-success-100 text-success-700 text-[10px] font-semibold px-2 py-1 uppercase"
+                >
+                  BUSINESS
+                </span>
+                <span class="text-primary-500 font-bold text-lg">$57</span>
+              </div>
+
+              <h3 class="text-gray-900 text-body-medium-500 mb-4 line-clamp-2">
+                Learn Python Programming Masterclass
+              </h3>
+
+              <div class="border-t border-gray-100 my-4"></div>
+
+              <div class="flex justify-between items-center">
+                <div class="flex items-center gap-1">
+                  <span class="text-orange-400">★</span>
+                  <span class="text-gray-900 font-semibold text-sm">5.0</span>
+                </div>
+                <div class="text-sm">
+                  <span class="text-gray-900 font-medium">265.7K</span>
+                  <span class="text-gray-400">students</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="max-w-[244px] bg-white hover:shadow-md transition-shadow">
+            <div class="relative w-full h-[160px]">
+              <img
+                src="assets/imgs/4cardimage.png"
+                alt="Course"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="p-4">
+              <div class="flex justify-between items-center mb-3">
+                <span
+                  class="bg-secondary-100 text-secondary-700 text-[10px] font-semibold px-2 py-1 uppercase"
+                >
+                  Marketing
+                </span>
+                <span class="text-primary-500 font-bold text-lg">$57</span>
+              </div>
+
+              <h3 class="text-gray-900 text-body-medium-500 mb-4 line-clamp-2">
+                The Complete Digital Marketing Course - 12 Courses in 1
+              </h3>
+
+              <div class="border-t border-gray-100 my-4"></div>
+
+              <div class="flex justify-between items-center">
+                <div class="flex items-center gap-1">
+                  <span class="text-orange-400">★</span>
+                  <span class="text-gray-900 font-semibold text-sm">5.0</span>
+                </div>
+                <div class="text-sm">
+                  <span class="text-gray-900 font-medium">265.7K</span>
+                  <span class="text-gray-400">students</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="max-w-[244px] bg-white hover:shadow-md transition-shadow">
+            <div class="relative w-full h-[160px]">
+              <img
+                src="assets/imgs/5cardimage.png"
+                alt="Course"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="p-4">
+              <div class="flex justify-between items-center mb-3">
+                <span
+                  class="bg-danger-100 text-danger-700 text-[10px] font-semibold px-2 py-1 uppercase"
+                >
+                  IT & Software
+                </span>
+                <span class="text-primary-500 font-bold text-lg">$57</span>
+              </div>
+
+              <h3 class="text-gray-900 text-body-medium-500 mb-4 line-clamp-2">
+                Reiki Level I, II and Master/Teacher Program
+              </h3>
+
+              <div class="border-t border-gray-100 my-4"></div>
+
+              <div class="flex justify-between items-center">
+                <div class="flex items-center gap-1">
+                  <span class="text-orange-400">★</span>
+                  <span class="text-gray-900 font-semibold text-sm">5.0</span>
+                </div>
+                <div class="text-sm">
+                  <span class="text-gray-900 font-medium">265.7K</span>
+                  <span class="text-gray-400">students</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="max-w-[244px] bg-white hover:shadow-md transition-shadow">
+            <div class="relative w-full h-[160px]">
+              <img
+                src="assets/imgs/6cardimage.png"
+                alt="Course"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="p-4">
+              <div class="flex justify-between items-center mb-3">
+                <span
+                  class="bg-primary-100 text-primary-700 text-[10px] font-semibold px-2 py-1 uppercase"
+                >
+                  Music
+                </span>
+                <span class="text-primary-500 font-bold text-lg">$57</span>
+              </div>
+
+              <h3 class="text-gray-900 text-body-medium-500 mb-4 line-clamp-2">
+                The Complete Foundation Stock Trading Course
+              </h3>
+
+              <div class="border-t border-gray-100 my-4"></div>
+
+              <div class="flex justify-between items-center">
+                <div class="flex items-center gap-1">
+                  <span class="text-orange-400">★</span>
+                  <span class="text-gray-900 font-semibold text-sm">5.0</span>
+                </div>
+                <div class="text-sm">
+                  <span class="text-gray-900 font-medium">265.7K</span>
+                  <span class="text-gray-400">students</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="max-w-[244px] bg-white hover:shadow-md transition-shadow">
+            <div class="relative w-full h-[160px]">
+              <img
+                src="assets/imgs/7cardimage.png"
+                alt="Course"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="p-4">
+              <div class="flex justify-between items-center mb-3">
+                <span
+                  class="bg-secondary-100 text-secondary-700 text-[10px] font-semibold px-2 py-1 uppercase"
+                >
+                  Marketing
+                </span>
+                <span class="text-primary-500 font-bold text-lg">$57</span>
+              </div>
+
+              <h3 class="text-gray-900 text-body-medium-500 mb-4 line-clamp-2">
+                Beginner to Pro in Excel: Financial Modeling and Valuati...
+              </h3>
+
+              <div class="border-t border-gray-100 my-4"></div>
+
+              <div class="flex justify-between items-center">
+                <div class="flex items-center gap-1">
+                  <span class="text-orange-400">★</span>
+                  <span class="text-gray-900 font-semibold text-sm">5.0</span>
+                </div>
+                <div class="text-sm">
+                  <span class="text-gray-900 font-medium">265.7K</span>
+                  <span class="text-gray-400">students</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="max-w-[244px] bg-white hover:shadow-md transition-shadow">
+            <div class="relative w-full h-[160px]">
+              <img
+                src="assets/imgs/8cardimage.png"
+                alt="Course"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="p-4">
+              <div class="flex justify-between items-center mb-3">
+                <span
+                  class="bg-success-100 text-success-700 text-[10px] font-semibold px-2 py-1 uppercase"
+                >
+                  Health & Fitness
+                </span>
+                <span class="text-primary-500 font-bold text-lg">$57</span>
+              </div>
+
+              <h3 class="text-gray-900 text-body-medium-500 mb-4 line-clamp-2">
+                The Python Mega Course: Build 10 Real World Applications
+              </h3>
+
+              <div class="border-t border-gray-100 my-4"></div>
+
+              <div class="flex justify-between items-center">
+                <div class="flex items-center gap-1">
+                  <span class="text-orange-400">★</span>
+                  <span class="text-gray-900 font-semibold text-sm">5.0</span>
+                </div>
+                <div class="text-sm">
+                  <span class="text-gray-900 font-medium">265.7K</span>
+                  <span class="text-gray-400">students</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="max-w-[244px] bg-white hover:shadow-md transition-shadow">
+            <div class="relative w-full h-[160px]">
+              <img
+                src="assets/imgs/9cardimage.png"
+                alt="Course"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="p-4">
+              <div class="flex justify-between items-center mb-3">
+                <span
+                  class="bg-primary-100 text-primary-700 text-[10px] font-semibold px-2 py-1 uppercase"
+                >
+                  Design
+                </span>
+                <span class="text-primary-500 font-bold text-lg">$57</span>
+              </div>
+
+              <h3 class="text-gray-900 text-body-medium-500 mb-4 line-clamp-2">
+                Copywriting - Become a Freelance Copywriter, your ow...
+              </h3>
+
+              <div class="border-t border-gray-100 my-4"></div>
+
+              <div class="flex justify-between items-center">
+                <div class="flex items-center gap-1">
+                  <span class="text-orange-400">★</span>
+                  <span class="text-gray-900 font-semibold text-sm">5.0</span>
+                </div>
+                <div class="text-sm">
+                  <span class="text-gray-900 font-medium">265.7K</span>
+                  <span class="text-gray-400">students</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="max-w-[244px] bg-white hover:shadow-md transition-shadow">
+            <div class="relative w-full h-[160px]">
+              <img
+                src="assets/imgs/10cardimage.png"
+                alt="Course"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="p-4">
+              <div class="flex justify-between items-center mb-3">
+                <span
+                  class="bg-primary-100 text-primary-700 text-[10px] font-semibold px-2 py-1 uppercase"
+                >
+                  Lifestyle
+                </span>
+                <span class="text-primary-500 font-bold text-lg">$57</span>
+              </div>
+
+              <h3 class="text-gray-900 text-body-medium-500 mb-4 line-clamp-2">
+                Google Analytics Certification - Learn How To Pass The Exam
+              </h3>
+
+              <div class="border-t border-gray-100 my-4"></div>
+
+              <div class="flex justify-between items-center">
+                <div class="flex items-center gap-1">
+                  <span class="text-orange-400">★</span>
+                  <span class="text-gray-900 font-semibold text-sm">5.0</span>
+                </div>
+                <div class="text-sm">
+                  <span class="text-gray-900 font-medium">265.7K</span>
+                  <span class="text-gray-400">students</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- feature courses -->
+    <section class="pb-20">
+      <div
+        class="max-w-[1480px] mx-auto bg-white p-10 shadow-sm -mt-65 relative"
+      >
+        <div class="flex justify-between items-end mb-8">
+          <h2 class="text-3xl font-semibold text-gray-900">
+            Our feature courses
+          </h2>
+          <p class="text-gray-500 max-w-[400px] text-sm text-right">
+            Vestibulum sed dolor sed diam mollis maximus vel nec dolor. Donec
+            varius purus et eleifend porta.
           </p>
-        </section>
+        </div>
 
-        <section class="trust-section">
-          <div class="trust-info">
-            <h2>6.3k trusted companies</h2>
-            <p>
-              Nullam egestas tellus at enim ornare tristique.<br>  Class aptent
-              taciti sociosqu ad litora torquent <br> per conubia nostra.
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div
+            class="flex border border-gray-100 group hover:shadow-md transition-shadow"
+          >
+            <div class="w-2/5 shrink-0">
+              <img
+                src="assets/imgs/feature1pic.png"
+                class="w-full h-full object-cover"
+                alt="Course"
+              />
+            </div>
+
+            <div class="w-3/5 p-4 flex flex-col justify-between">
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span
+                    class="text-label-small uppercase px-2 py-1 bg-success-100 text-success-600"
+                    >Health & Fitness</span
+                  >
+                  <div class="text-body-xl-400 text-gray-900">
+                    $14.00
+                    <span class="text-xs text-gray-400 line-through font-normal"
+                      >$26.00</span
+                    >
+                  </div>
+                </div>
+                <h3 class="text-body-large-500 text-gray-900 mb-2">
+                  Investing In Stocks The Complete Course! 13 H...
+                </h3>
+                <div class="flex items-center gap-2 text-sm text-gray-500 mb-4">
+                  <img
+                    src="assets/icons/profile iconK.G.jpg"
+                    class="w-6 h-6 rounded-full"
+                    alt="Kevin"
+                  />
+                  <span>Kevin Gilbert</span>
+                  <span
+                    class="ml-auto flex items-center gap-1 text-gray-900 font-medium"
+                  >
+                    <span class="text-orange-400">★</span> 5.0
+                    <span class="text-gray-400 font-normal">(357,914)</span>
+                  </span>
+                </div>
+              </div>
+
+              <div
+                class="border-t border-gray-100 pt-3 flex justify-between text-xs text-gray-500"
+              >
+                <div class="flex items-center gap-1">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 12.5C12.7614 12.5 15 10.2614 15 7.5C15 4.73858 12.7614 2.5 10 2.5C7.23858 2.5 5 4.73858 5 7.5C5 10.2614 7.23858 12.5 10 12.5Z"
+                      stroke="#564FFD"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M2.42102 16.8743C3.18943 15.5442 4.29431 14.4398 5.62468 13.672C6.95505 12.9042 8.46405 12.5 10.0001 12.5C11.5361 12.5 13.0451 12.9043 14.3755 13.6721C15.7058 14.44 16.8107 15.5444 17.5791 16.8744"
+                      stroke="#564FFD"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  265.7K students
+                </div>
+                <div class="flex items-center gap-1">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 16.6666V8.33325"
+                      stroke="#E34444"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15 16.6666V3.33325"
+                      stroke="#E34444"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M5 16.6666V13.3333"
+                      stroke="#E34444"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Beginner
+                </div>
+                <div class="flex items-center gap-1">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z"
+                      stroke="#23BD33"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M10 5.625V10H14.375"
+                      stroke="#23BD33"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  6 hour
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex border border-gray-100 group hover:shadow-md transition-shadow"
+          >
+            <div class="w-2/5 shrink-0">
+              <img
+                src="assets/imgs/feature2pic.png"
+                class="w-full h-full object-cover"
+                alt="Course"
+              />
+            </div>
+
+            <div class="w-3/5 p-4 flex flex-col justify-between">
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span
+                    class="text-label-small uppercase px-2 py-1 bg-danger-100 text-danger-600"
+                    >Personal Development</span
+                  >
+                  <div class="text-body-xl-400 text-gray-900">
+                    $14.00
+                    <span class="text-xs text-gray-400 line-through font-normal"
+                      >$26.00</span
+                    >
+                  </div>
+                </div>
+                <h3 class="text-body-large-500 text-gray-900 mb-2">
+                  Google Analytics Certification - Learn How To...
+                </h3>
+                <div class="flex items-center gap-2 text-sm text-gray-500 mb-4">
+                  <img
+                    src="assets/icons/profile iconK.G.jpg"
+                    class="w-6 h-6 rounded-full"
+                    alt="Kevin"
+                  />
+                  <span>Kevin Gilbert</span>
+                  <span
+                    class="ml-auto flex items-center gap-1 text-gray-900 font-medium"
+                  >
+                    <span class="text-orange-400">★</span> 5.0
+                    <span class="text-gray-400 font-normal">(357,914)</span>
+                  </span>
+                </div>
+              </div>
+
+              <div
+                class="border-t border-gray-100 pt-3 flex justify-between text-xs text-gray-500"
+              >
+                <div class="flex items-center gap-1">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 12.5C12.7614 12.5 15 10.2614 15 7.5C15 4.73858 12.7614 2.5 10 2.5C7.23858 2.5 5 4.73858 5 7.5C5 10.2614 7.23858 12.5 10 12.5Z"
+                      stroke="#564FFD"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M2.42102 16.8743C3.18943 15.5442 4.29431 14.4398 5.62468 13.672C6.95505 12.9042 8.46405 12.5 10.0001 12.5C11.5361 12.5 13.0451 12.9043 14.3755 13.6721C15.7058 14.44 16.8107 15.5444 17.5791 16.8744"
+                      stroke="#564FFD"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  265.7K students
+                </div>
+                <div class="flex items-center gap-1">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 16.6666V8.33325"
+                      stroke="#E34444"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15 16.6666V3.33325"
+                      stroke="#E34444"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M5 16.6666V13.3333"
+                      stroke="#E34444"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Beginner
+                </div>
+                <div class="flex items-center gap-1">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z"
+                      stroke="#23BD33"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M10 5.625V10H14.375"
+                      stroke="#23BD33"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  6 hour
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex border border-gray-100 group hover:shadow-md transition-shadow"
+          >
+            <div class="w-2/5 shrink-0">
+              <img
+                src="assets/imgs/feature3pic.png"
+                class="w-full h-full object-cover"
+                alt="Course"
+              />
+            </div>
+
+            <div class="w-3/5 p-4 flex flex-col justify-between">
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span
+                    class="text-label-small uppercase px-2 py-1 bg-gray-100 text-gray-800"
+                    >Productivity</span
+                  >
+                  <div class="text-body-xl-400 text-gray-900">
+                    $14.00
+                    <span class="text-xs text-gray-400 line-through font-normal"
+                      >$26.00</span
+                    >
+                  </div>
+                </div>
+                <h3 class="text-body-large-500 text-primary-500 mb-2">
+                  Adobe XD for Web Design: Essential Principles
+                </h3>
+                <div class="flex items-center gap-2 text-sm text-gray-500 mb-4">
+                  <img
+                    src="assets/icons/profile iconK.G.jpg"
+                    class="w-6 h-6 rounded-full"
+                    alt="Kevin"
+                  />
+                  <span>Kevin Gilbert</span>
+                  <span
+                    class="ml-auto flex items-center gap-1 text-gray-900 font-medium"
+                  >
+                    <span class="text-orange-400">★</span> 5.0
+                    <span class="text-gray-400 font-normal">(357,914)</span>
+                  </span>
+                </div>
+              </div>
+
+              <div
+                class="border-t border-gray-100 pt-3 flex justify-between text-xs text-gray-500"
+              >
+                <div class="flex items-center gap-1">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 12.5C12.7614 12.5 15 10.2614 15 7.5C15 4.73858 12.7614 2.5 10 2.5C7.23858 2.5 5 4.73858 5 7.5C5 10.2614 7.23858 12.5 10 12.5Z"
+                      stroke="#564FFD"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M2.42102 16.8743C3.18943 15.5442 4.29431 14.4398 5.62468 13.672C6.95505 12.9042 8.46405 12.5 10.0001 12.5C11.5361 12.5 13.0451 12.9043 14.3755 13.6721C15.7058 14.44 16.8107 15.5444 17.5791 16.8744"
+                      stroke="#564FFD"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  265.7K students
+                </div>
+                <div class="flex items-center gap-1">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 16.6666V8.33325"
+                      stroke="#E34444"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15 16.6666V3.33325"
+                      stroke="#E34444"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M5 16.6666V13.3333"
+                      stroke="#E34444"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Beginner
+                </div>
+                <div class="flex items-center gap-1">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z"
+                      stroke="#23BD33"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M10 5.625V10H14.375"
+                      stroke="#23BD33"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  6 hour
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex border border-gray-100 group hover:shadow-md transition-shadow"
+          >
+            <div class="w-2/5 shrink-0">
+              <img
+                src="assets/imgs/feature4pic.png"
+                class="w-full h-full object-cover"
+                alt="Course"
+              />
+            </div>
+
+            <div class="w-3/5 p-4 flex flex-col justify-between">
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span
+                    class="text-label-small uppercase px-2 py-1 bg-primary-100 text-primary-600"
+                    >Music</span
+                  >
+                  <div class="text-body-xl-400 text-gray-900">
+                    $14.00
+                    <span class="text-xs text-gray-400 line-through font-normal"
+                      >$26.00</span
+                    >
+                  </div>
+                </div>
+                <h3 class="text-body-large-500 text-gray-900 mb-2">
+                  Investing In Stocks The Complete Course! 13 H...
+                </h3>
+                <div class="flex items-center gap-2 text-sm text-gray-500 mb-4">
+                  <img
+                    src="assets/icons/profile iconK.G.jpg"
+                    class="w-6 h-6 rounded-full"
+                    alt="Kevin"
+                  />
+                  <span>Kevin Gilbert</span>
+                  <span
+                    class="ml-auto flex items-center gap-1 text-gray-900 font-medium"
+                  >
+                    <span class="text-orange-400">★</span> 5.0
+                    <span class="text-gray-400 font-normal">(357,914)</span>
+                  </span>
+                </div>
+              </div>
+
+              <div
+                class="border-t border-gray-100 pt-3 flex justify-between text-xs text-gray-500"
+              >
+                <div class="flex items-center gap-1">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 12.5C12.7614 12.5 15 10.2614 15 7.5C15 4.73858 12.7614 2.5 10 2.5C7.23858 2.5 5 4.73858 5 7.5C5 10.2614 7.23858 12.5 10 12.5Z"
+                      stroke="#564FFD"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M2.42102 16.8743C3.18943 15.5442 4.29431 14.4398 5.62468 13.672C6.95505 12.9042 8.46405 12.5 10.0001 12.5C11.5361 12.5 13.0451 12.9043 14.3755 13.6721C15.7058 14.44 16.8107 15.5444 17.5791 16.8744"
+                      stroke="#564FFD"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  265.7K students
+                </div>
+                <div class="flex items-center gap-1">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 16.6666V8.33325"
+                      stroke="#E34444"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15 16.6666V3.33325"
+                      stroke="#E34444"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M5 16.6666V13.3333"
+                      stroke="#E34444"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Beginner
+                </div>
+                <div class="flex items-center gap-1">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z"
+                      stroke="#23BD33"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M10 5.625V10H14.375"
+                      stroke="#23BD33"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  6 hour
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- recently added courses -->
+    <section class="py-20 bg-white">
+      <div class="max-w-[1320px] mx-auto px-4">
+        <h2 class="text-heading-02 text-center text-gray-900 mb-12">
+          Recently added courses
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div
+            class="bg-white border border-gray-100 group hover:shadow-xl transition-all duration-300"
+          >
+            <div class="relative aspect-video overflow-hidden">
+              <img
+                src="assets/imgs/recentlypic1.png"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                alt=""
+              />
+            </div>
+            <div class="p-4">
+              <div class="flex justify-between items-center mb-3">
+                <span
+                  class="text-label-small px-2 py-1 bg-primary-100 text-primary-600 uppercase"
+                  >Design</span
+                >
+                <span class="text-body-xl-500 text-primary-500">$57</span>
+              </div>
+              <h3
+                class="text-body-large-500 text-gray-900 mb-4 line-clamp-2 h-10"
+              >
+                The Python Mega Course: Build 10 Real World Applications
+              </h3>
+              <div
+                class="border-t border-gray-100 pt-4 flex justify-between items-center"
+              >
+                <div class="flex items-center gap-1">
+                  <span class="text-orange-400">★</span>
+                  <span class="text-sm font-semibold">5.0</span>
+                </div>
+                <div class="text-xs text-gray-500 flex gap-1 items-center">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 12.5C12.7614 12.5 15 10.2614 15 7.5C15 4.73858 12.7614 2.5 10 2.5C7.23858 2.5 5 4.73858 5 7.5C5 10.2614 7.23858 12.5 10 12.5Z"
+                      stroke="#564FFD"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M2.42102 16.8743C3.18943 15.5442 4.29431 14.4398 5.62468 13.672C6.95505 12.9042 8.46405 12.5 10.0001 12.5C11.5361 12.5 13.0451 12.9043 14.3755 13.6721C15.7058 14.44 16.8107 15.5444 17.5791 16.8744"
+                      stroke="#564FFD"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span class="text-gray-900 font-medium"> 265.7K</span>
+                  students
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white border border-gray-100 group hover:shadow-xl transition-all duration-300"
+          >
+            <div class="relative aspect-video overflow-hidden">
+              <img
+                src="assets/imgs/recentlypic2.png"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                alt=""
+              />
+            </div>
+            <div class="p-4">
+              <div class="flex justify-between items-center mb-3">
+                <span
+                  class="text-label-small px-2 py-1 bg-danger-100 text-danger-600 uppercase"
+                  >IT & Software</span
+                >
+                <span class="text-body-xl-500 text-primary-500">$57</span>
+              </div>
+              <h3
+                class="text-body-large-500 text-gray-900 mb-4 line-clamp-2 h-10"
+              >
+                Facebook Ads & Facebook Marketing MASTERY 2021 Cours...
+              </h3>
+              <div
+                class="border-t border-gray-100 pt-4 flex justify-between items-center"
+              >
+                <div class="flex items-center gap-1">
+                  <span class="text-orange-400">★</span>
+                  <span class="text-sm font-semibold">5.0</span>
+                </div>
+                <div class="text-xs text-gray-500 flex gap-1 items-center">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 12.5C12.7614 12.5 15 10.2614 15 7.5C15 4.73858 12.7614 2.5 10 2.5C7.23858 2.5 5 4.73858 5 7.5C5 10.2614 7.23858 12.5 10 12.5Z"
+                      stroke="#564FFD"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M2.42102 16.8743C3.18943 15.5442 4.29431 14.4398 5.62468 13.672C6.95505 12.9042 8.46405 12.5 10.0001 12.5C11.5361 12.5 13.0451 12.9043 14.3755 13.6721C15.7058 14.44 16.8107 15.5444 17.5791 16.8744"
+                      stroke="#564FFD"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span class="text-gray-900 font-medium"> 265.7K</span>
+                  students
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white border border-gray-100 group hover:shadow-xl transition-all duration-300"
+          >
+            <div class="relative aspect-video overflow-hidden">
+              <img
+                src="assets/imgs/recentlypic3.png"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                alt=""
+              />
+            </div>
+            <div class="p-4">
+              <div class="flex justify-between items-center mb-3">
+                <span
+                  class="text-label-small px-2 py-1 bg-secondary-100 text-secondary-600 uppercase"
+                  >Developments</span
+                >
+                <span class="text-body-xl-500 text-primary-500">$57</span>
+              </div>
+              <h3
+                class="text-body-large-500 text-gray-900 mb-4 line-clamp-2 h-10"
+              >
+                2021 Complete Python Bootcamp From Zero to Hero in Python
+              </h3>
+              <div
+                class="border-t border-gray-100 pt-4 flex justify-between items-center"
+              >
+                <div class="flex items-center gap-1">
+                  <span class="text-orange-400">★</span>
+                  <span class="text-sm font-semibold">5.0</span>
+                </div>
+                <div class="text-xs text-gray-500 flex gap-1 items-center">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 12.5C12.7614 12.5 15 10.2614 15 7.5C15 4.73858 12.7614 2.5 10 2.5C7.23858 2.5 5 4.73858 5 7.5C5 10.2614 7.23858 12.5 10 12.5Z"
+                      stroke="#564FFD"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M2.42102 16.8743C3.18943 15.5442 4.29431 14.4398 5.62468 13.672C6.95505 12.9042 8.46405 12.5 10.0001 12.5C11.5361 12.5 13.0451 12.9043 14.3755 13.6721C15.7058 14.44 16.8107 15.5444 17.5791 16.8744"
+                      stroke="#564FFD"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span class="text-gray-900 font-medium"> 265.7K</span>
+                  students
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white border border-gray-100 group hover:shadow-xl transition-all duration-300"
+          >
+            <div class="relative aspect-video overflow-hidden">
+              <img
+                src="assets/imgs/recentlypic4.png"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                alt=""
+              />
+            </div>
+            <div class="p-4">
+              <div class="flex justify-between items-center mb-3">
+                <span
+                  class="text-label-small px-2 py-1 bg-secondary-100 text-secondary-600 uppercase"
+                  >Design</span
+                >
+                <span class="text-body-xl-500 text-primary-500">$57</span>
+              </div>
+              <h3
+                class="text-body-large-500 text-gray-900 mb-4 line-clamp-2 h-10"
+              >
+                How to get Diamond in soloQ | League of Legends | Season 11
+              </h3>
+              <div
+                class="border-t border-gray-100 pt-4 flex justify-between items-center"
+              >
+                <div class="flex items-center gap-1">
+                  <span class="text-orange-400">★</span>
+                  <span class="text-sm font-semibold">5.0</span>
+                </div>
+                <div class="text-xs text-gray-500 flex gap-1 items-center">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10 12.5C12.7614 12.5 15 10.2614 15 7.5C15 4.73858 12.7614 2.5 10 2.5C7.23858 2.5 5 4.73858 5 7.5C5 10.2614 7.23858 12.5 10 12.5Z"
+                      stroke="#564FFD"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                    />
+                    <path
+                      d="M2.42102 16.8743C3.18943 15.5442 4.29431 14.4398 5.62468 13.672C6.95505 12.9042 8.46405 12.5 10.0001 12.5C11.5361 12.5 13.0451 12.9043 14.3755 13.6721C15.7058 14.44 16.8107 15.5444 17.5791 16.8744"
+                      stroke="#564FFD"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span class="text-gray-900 font-medium"> 265.7K</span>
+                  students
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <button
+            class="bg-orange-50 text-[#FF6636] px-6 py-3 font-semibold inline-flex items-center gap-2 hover:bg-[#FF6636] hover:text-white transition-colors cursor-pointer"
+          >
+            Browse All Course
+            <span>&rarr;</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- instructor section -->
+    <section class="bg-gray-50 pt-20 pb-[320px]">
+      <div class="max-w-[1320px] mx-auto px-4 flex flex-col lg:flex-row gap-6">
+        <div
+          class="relative flex-1 bg-gradient-to-r from-[#CC522B] to-[#FF6636] overflow-hidden flex items-center min-h-[300px]"
+        >
+          <div class="relative p-10 z-10 w-full md:w-[70%] lg:w-[75%]">
+            <h2 class="text-white text-3xl font-semibold mb-4">
+              Become an instructor
+            </h2>
+            <p class="text-white/90 text-sm mb-8 max-w-[350px]">
+              Instructors from around the world teach millions of students on
+              Udemy. We provide the tools and skills to teach what you love.
             </p>
+
+            <button
+              class="bg-white text-[#FF6636] px-8 py-4 font-bold flex items-center gap-2 hover:bg-gray-100 transition-all shadow-lg active:scale-95 cursor-pointer"
+            >
+              Start Teaching
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.125 10H16.875M16.875 10L11.25 4.375M16.875 10L11.25 15.625"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
           </div>
-          <div class="logo-grid">
-            <div class="logo-card">
-              <img src="./assets/imgs/Vector (9).png" alt="Netflix" />
+
+          <div
+            class="absolute right-0 bottom-0 h-full w-1/2 flex justify-end items-end"
+          >
+            <img
+              src="assets/imgs/Become an Instructor (1).png"
+              alt="Instructor"
+              class="h-[95%] object-contain object-bottom pointer-events-none"
+            />
+          </div>
+        </div>
+
+        <div
+          class="flex-1 bg-white border border-gray-100 p-10 flex flex-col justify-center"
+        >
+          <h2 class="text-3xl font-semibold text-gray-900 mb-10">
+            Your teaching & earning steps
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-6">
+            <div class="flex items-center gap-4">
+              <div
+                class="w-12 h-12 shrink-0 rounded-full bg-[#EBEBFF] flex items-center justify-center text-[#564FFD] font-bold text-lg"
+              >
+                1
+              </div>
+              <p class="text-[15px] text-gray-700 font-medium">
+                Apply to become instructor
+              </p>
             </div>
-            <div class="logo-card">
-              <img src="./assets/imgs/youtube.png" alt="YouTube" />
+
+            <div class="flex items-center gap-4">
+              <div
+                class="w-12 h-12 shrink-0 rounded-full bg-[#FFF2E5] flex items-center justify-center text-[#FD8E1F] font-bold text-lg"
+              >
+                2
+              </div>
+              <p class="text-[15px] text-gray-700 font-medium">
+                Build & edit your profile
+              </p>
             </div>
-            <div class="logo-card">
-              <img src="./assets/imgs/google.png" alt="Google" />
+
+            <div class="flex items-center gap-4">
+              <div
+                class="w-12 h-12 shrink-0 rounded-full bg-[#FFEEE8] flex items-center justify-center text-[#FF6636] font-bold text-lg"
+              >
+                3
+              </div>
+              <p class="text-[15px] text-gray-700 font-medium">
+                Create your new course
+              </p>
             </div>
-            <div class="logo-card">
-              <img src="./assets/imgs/lenovo.png" alt="Lenovo" />
-            </div>
-            <div class="logo-card">
-              <img src="./assets/imgs/slack.png" alt="Slack" />
-            </div>
-            <div class="logo-card">
-              <img src="./assets/imgs/verizon.png" alt="Verizon" />
-            </div>
-            <div class="logo-card">
-              <img src="./assets/imgs/lexmark.png" alt="Lexmark" />
-            </div>
-            <div class="logo-card">
-              <img src="./assets/imgs/microsoft.png" alt="Microsoft" />
+
+            <div class="flex items-center gap-4">
+              <div
+                class="w-12 h-12 shrink-0 rounded-full bg-[#E1F7E3] flex items-center justify-center text-[#23BD33] font-bold text-lg"
+              >
+                4
+              </div>
+              <p class="text-[15px] text-gray-700 font-medium">
+                Start teaching & earning
+              </p>
             </div>
           </div>
-        </section>
+        </div>
       </div>
+    </section>
+    <!-- top instractor of the moth section -->
+    <section class="pb-20">
+      <div
+        class="max-w-[1480px] bg-white mx-auto p-10 shadow-sm -mt-65 relative"
+      >
+        <div class="flex flex-col items-center justify-center">
+          <h2 class="text-heading-02 text-gray-900 text-center pb-8">
+            Top instructor of the month
+          </h2>
 
+          <div class="flex flex-row gap-[25px]">
+            <div
+              class="max-w-[244px] max-h-[362px] bg-white border border-gray-100 flex flex-col shadow-sm hover:shadow-md transition-shadow duration-300"
+            >
+              <div class="relative w-full h-[228px] overflow-hidden">
+                <img
+                  src="assets/imgs/Image (11).png"
+                  alt="Devon Lane"
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
 
-    <!--Footer-->
+              <div class="flex-1 flex flex-col items-center justify-center p-4">
+                <h3 class="text-gray-900 text-body-large-500 mb-1">
+                  Devon Lane
+                </h3>
+                <p class="text-gray-500 text-body-medium-400">
+                  Senior Developer
+                </p>
+              </div>
 
+              <div
+                class="border-t border-gray-100 p-4 flex justify-between items-center"
+              >
+                <div class="flex items-center gap-1">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 20 20"
+                    fill="#FF6636"
+                  >
+                    <path
+                      d="M10 1l2.6 6.3h6.7l-5.4 4.1 2.1 6.6-6-4.2-6 4.2 2.1-6.6-5.4-4.1h6.7z"
+                    />
+                  </svg>
+                  <span class="text-gray-700 text-body-medium-500">4.6</span>
+                </div>
+                <div class="text-[14px]">
+                  <span class="text-gray-700 text-body-medium-500">854</span>
+                  <span class="text-gray-400">students</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="max-w-[244px] max-h-[362px] bg-white border border-gray-100 flex flex-col shadow-sm hover:shadow-md transition-shadow duration-300"
+            >
+              <div class="relative w-full h-[228px] overflow-hidden">
+                <img
+                  src="assets/imgs/Image (12).png"
+                  alt="Devon Lane"
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
 
-    <footer>
+              <div class="flex-1 flex flex-col items-center justify-center p-4">
+                <h3 class="text-gray-900 text-body-large-500 mb-1">
+                  Devon Lane
+                </h3>
+                <p class="text-gray-500 text-body-medium-400">
+                  Digital Product Designer
+                </p>
+              </div>
 
-      <div class="call-to-action">
+              <div
+                class="border-t border-gray-100 p-4 flex justify-between items-center"
+              >
+                <div class="flex items-center gap-1">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 20 20"
+                    fill="#FF6636"
+                  >
+                    <path
+                      d="M10 1l2.6 6.3h6.7l-5.4 4.1 2.1 6.6-6-4.2-6 4.2 2.1-6.6-5.4-4.1h6.7z"
+                    />
+                  </svg>
+                  <span class="text-gray-700 text-body-medium-500">4.9</span>
+                </div>
+                <div class="text-[14px]">
+                  <span class="text-gray-700 text-body-medium-500"
+                    >451,444</span
+                  >
+                  <span class="text-gray-400">students</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="max-w-[244px] max-h-[362px] bg-white border border-gray-100 flex flex-col shadow-sm hover:shadow-md transition-shadow duration-300"
+            >
+              <div class="relative w-full h-[228px] overflow-hidden">
+                <img
+                  src="assets/imgs/Image (13).png"
+                  alt="Devon Lane"
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
 
-        <div class="content">
-          <h2>Start learning with 67.1k <br> students around the world.</h2>
-          <div class="buttons">
-            <button class="btn-primary-primary">Join the Family</button>
-            <button class="btn-secondary-gray">Browse all courses</button>
+              <div class="flex-1 flex flex-col items-center justify-center p-4">
+                <h3 class="text-gray-900 text-body-large-500 mb-1">
+                  Jane Cooper
+                </h3>
+                <p class="text-gray-500 text-body-medium-400">UI/UX Designer</p>
+              </div>
+
+              <div
+                class="border-t border-gray-100 p-4 flex justify-between items-center"
+              >
+                <div class="flex items-center gap-1">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 20 20"
+                    fill="#FF6636"
+                  >
+                    <path
+                      d="M10 1l2.6 6.3h6.7l-5.4 4.1 2.1 6.6-6-4.2-6 4.2 2.1-6.6-5.4-4.1h6.7z"
+                    />
+                  </svg>
+                  <span class="text-gray-700 text-body-medium-500">4.8</span>
+                </div>
+                <div class="text-[14px]">
+                  <span class="text-gray-700 text-body-medium-500"
+                    >435,671</span
+                  >
+                  <span class="text-gray-400">students</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="max-w-[244px] max-h-[362px] bg-white border border-gray-100 flex flex-col shadow-sm hover:shadow-md transition-shadow duration-300"
+            >
+              <div class="relative w-full h-[228px] overflow-hidden">
+                <img
+                  src="assets/imgs/Image (14).png"
+                  alt="Devon Lane"
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
+
+              <div class="flex-1 flex flex-col items-center justify-center p-4">
+                <h3 class="text-gray-900 text-body-large-500 mb-1">
+                  Albert Flores
+                </h3>
+                <p class="text-gray-500 text-body-medium-400">
+                  Adobe Instructor
+                </p>
+              </div>
+
+              <div
+                class="border-t border-gray-100 p-4 flex justify-between items-center"
+              >
+                <div class="flex items-center gap-1">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 20 20"
+                    fill="#FF6636"
+                  >
+                    <path
+                      d="M10 1l2.6 6.3h6.7l-5.4 4.1 2.1 6.6-6-4.2-6 4.2 2.1-6.6-5.4-4.1h6.7z"
+                    />
+                  </svg>
+                  <span class="text-gray-700 text-body-medium-500">4.7</span>
+                </div>
+                <div class="text-[14px]">
+                  <span class="text-gray-700 text-body-medium-500"
+                    >511,123</span
+                  >
+                  <span class="text-gray-400">students</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="max-w-[244px] max-h-[362px] bg-white border border-gray-100 flex flex-col shadow-sm hover:shadow-md transition-shadow duration-300"
+            >
+              <div class="relative w-full h-[228px] overflow-hidden">
+                <img
+                  src="assets/imgs/Image (15).png"
+                  alt="Devon Lane"
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
+
+              <div class="flex-1 flex flex-col items-center justify-center p-4">
+                <h3 class="text-gray-900 text-body-large-500 mb-1">
+                  Kathryn Murphy
+                </h3>
+                <p class="text-gray-500 text-body-medium-400">Lead Developer</p>
+              </div>
+
+              <div
+                class="border-t border-gray-100 p-4 flex justify-between items-center"
+              >
+                <div class="flex items-center gap-1">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 20 20"
+                    fill="#FF6636"
+                  >
+                    <path
+                      d="M10 1l2.6 6.3h6.7l-5.4 4.1 2.1 6.6-6-4.2-6 4.2 2.1-6.6-5.4-4.1h6.7z"
+                    />
+                  </svg>
+                  <span class="text-gray-700 text-body-medium-500">4.2</span>
+                </div>
+                <div class="text-[14px]">
+                  <span class="text-gray-700 text-body-medium-500">2,711</span>
+                  <span class="text-gray-400">students</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10 text-body-medium-400 text-center text-gray-600">
+            Thousands of students waiting for a instructor. Start teaching &
+            earning now!.
+            <a
+              href="#"
+              class="text-primary-500 font-medium hover:underline inline-flex items-center gap-1"
+            >
+              Become Instructor
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.125 10H16.875M16.875 10L11.25 4.375M16.875 10L11.25 15.625"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
           </div>
         </div>
-
-        <div class="fun-facts">
-
-          <div class="fun-fact">
-            <h2>6.3k</h2>
-            <p>Online courses</p>
-          </div>
-          <div class="fun-fact">
-            <h2>26k</h2>
-            <p>Certified Instructor</p>
-          </div>
-          <div class="fun-fact">
-            <h2>99.9%</h2>
-            <p>Sucess Rate</p>
-          </div>
-
-        </div>
-
       </div>
-
-      <div class="main-footer">
-        <div class="eduguard">
-          <div class="content">
-             <div class="logo">
-                <img src="assets/icons/GraduationCap.svg" alt="logo">
-                <h1>E-tutor</h1>
-             </div>
-             <p>Aliquam rhoncus ligula est, non pulvinar elit<br>
-             convallis nec. Donec mattis odio at.</p>
-          </div>
-          <div class="social-media">
-            <img src="assets/icons/Social (1).png" alt="facebook">
-            <img src="assets/icons/Social.png" alt="instagram">
-            <img src="assets/icons/Social (4).png" alt="linkedin">
-            <img src="assets/icons/Social (2).png" alt="twitter">
-            <img src="assets/icons/Social (3).png" alt="youtube">
-          </div>
-
+    </section>
+    <!-- trusted companies section -->
+    <section class="w-full bg-white py-24 border-b border-gray-100">
+      <div
+        class="max-w-[1920px] mx-auto px-4 md:px-[300px] flex flex-col lg:flex-row items-center justify-between gap-16"
+      >
+        <div class="max-w-[400px]">
+          <h2 class="text-heading-03 text-gray-900 leading-tight mb-4">
+            6.3k trusted companies
+          </h2>
+          <p class="text-gray-500 text-body-medium-400">
+            Nullam egestas tellus at enim ornare tristique. <br />
+            Class aptent taciti sociosqu ad litora torquent <br />
+            per conubia nostra.
+          </p>
         </div>
 
-        <div class="explore">
-          <h3>Top 4 Category</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div
+            class="w-[180px] h-[100px] bg-white shadow-[0px_8px_24px_rgba(0,0,0,0.04)] flex items-center justify-center p-6 border border-gray-50"
+          >
+            <img
+              src="assets/imgs/Company Logo.png"
+              alt="Netflix"
+              class="max-w-full"
+            />
+          </div>
+          <div
+            class="w-[180px] h-[100px] bg-white shadow-[0px_8px_24px_rgba(0,0,0,0.04)] flex items-center justify-center p-6 border border-gray-50"
+          >
+            <img
+              src="assets/imgs/youtube.png"
+              alt="YouTube"
+              class="max-w-full"
+            />
+          </div>
+          <div
+            class="w-[180px] h-[100px] bg-white shadow-[0px_8px_24px_rgba(0,0,0,0.04)] flex items-center justify-center p-6 border border-gray-50"
+          >
+            <img src="assets/imgs/google.png" alt="Google" class="max-w-full" />
+          </div>
+          <div
+            class="w-[180px] h-[100px] bg-white shadow-[0px_8px_24px_rgba(0,0,0,0.04)] flex items-center justify-center p-6 border border-gray-50"
+          >
+            <img src="assets/imgs/lenovo.png" alt="Lenovo" class="max-w-full" />
+          </div>
+          <div
+            class="w-[180px] h-[100px] bg-white shadow-[0px_8px_24px_rgba(0,0,0,0.04)] flex items-center justify-center p-6 border border-gray-50"
+          >
+            <img src="assets/imgs/slack.png" alt="Slack" class="max-w-full" />
+          </div>
+          <div
+            class="w-[180px] h-[100px] bg-white shadow-[0px_8px_24px_rgba(0,0,0,0.04)] flex items-center justify-center p-6 border border-gray-50"
+          >
+            <img
+              src="assets/imgs/verizon.png"
+              alt="Verizon"
+              class="max-w-full"
+            />
+          </div>
+          <div
+            class="w-[180px] h-[100px] bg-white shadow-[0px_8px_24px_rgba(0,0,0,0.04)] flex items-center justify-center p-6 border border-gray-50"
+          >
+            <img
+              src="assets/imgs/lexmark.png"
+              alt="Lexmark"
+              class="max-w-full"
+            />
+          </div>
+          <div
+            class="w-[180px] h-[100px] bg-white shadow-[0px_8px_24px_rgba(0,0,0,0.04)] flex items-center justify-center p-6 border border-gray-50"
+          >
+            <img
+              src="assets/imgs/microsoft.png"
+              alt="Microsoft"
+              class="max-w-full"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- fooooooooooooooooooooooytttttttttttttttttttttttttttteeeeeeeeerrrrrrrrrrr -->
+    <footer class="w-full bg-gray-900 text-white py-15">
+      <div class="max-w-[1320px] mx-auto">
+        <div
+          class="flex flex-col lg:flex-row justify-between items-center pb-20"
+        >
+          <div class="max-w-[536px]">
+            <h2 class="text-heading-02 leading-tight mb-6">
+              Start learning with 67.1k students around the world.
+            </h2>
+            <div class="flex gap-4">
+              <button
+                class="bg-primary-500 px-6 py-3 font-semibold hover:bg-primary-600 transition-colors cursor-pointer"
+              >
+                Join The Family
+              </button>
+              <button
+                class="bg-gray-800 px-6 py-3 font-semibold hover:bg-gray-600 transition-colors cursor-pointer"
+              >
+                Browse All Courses
+              </button>
+            </div>
+          </div>
+
+          <div class="flex gap-16 mt-12 lg:mt-0">
+            <div>
+              <div class="text-heading-02">6.3k</div>
+              <div class="text-gray-400 text-body-large-500">
+                Online courses
+              </div>
+            </div>
+            <div>
+              <div class="text-heading-02">26k</div>
+              <div class="text-gray-400 text-body-large-500">
+                Certified Instructor
+              </div>
+            </div>
+            <div>
+              <div class="text-heading-02">99.9%</div>
+              <div class="text-gray-400 text-bo">Success Rate</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="border-[#363B4780]" />
+
+      <!-- second footer part -->
+      <div class="w-full bg-[#1D2026] py-20 flex items-center justify-center">
+        <div
+          class="max-w-[1320px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12"
+        >
+          <div class="space-y-6">
+            <div class="flex items-center gap-2">
+              <img
+                src="assets/icons/GraduationCap.svg"
+                alt="E-tutor"
+                class="w-10 h-10"
+              />
+              <span class="text-white text-2xl font-bold">E-tutor</span>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed max-w-[280px]">
+              Aliquam rhoncus ligula est, non pulvinar elit convallis nec. Donec
+              mattis odio at.
+            </p>
+            <div class="flex gap-2">
+              <a
+                href="#"
+                class="w-11 h-11 bg-[#242931] flex items-center justify-center text-white hover:bg-gray-700 transition-all"
+                ><img src="assets/imgs/Frame 75.png" alt=""
+              /></a>
+              <a
+                href="#"
+                class="w-11 h-11 bg-[#242931] flex items-center justify-center text-white hover:bg-gray-700 transition-all"
+                ><img src="assets/imgs/Instragarm.png" alt=""
+              /></a>
+              <a
+                href="#"
+                class="w-11 h-11 bg-[#FF6636] flex items-center justify-center text-white shadow-[0_0_15px_rgba(255,102,54,0.4)]"
+                ><img src="assets/imgs/Linkedin.png" alt=""
+              /></a>
+              <a
+                href="#"
+                class="w-11 h-11 bg-[#242931] flex items-center justify-center text-white hover:bg-gray-700 transition-all"
+                ><img src="assets/imgs/Twitter.png" alt=""
+              /></a>
+              <a
+                href="#"
+                class="w-11 h-11 bg-[#242931] flex items-center justify-center text-white hover:bg-gray-700 transition-all"
+                ><img src="assets/imgs/Frame 74.png" alt=""
+              /></a>
+            </div>
+          </div>
+
           <div>
-            <ul>
-              <li><a href="#">Development</a></li>
-              <li><a href="#">Finance & Accounting</a></li>
-              <li><a href="#">Design</a></li>
-              <li><a href="#">Business</a></li>
+            <h4
+              class="text-white font-semibold mb-6 uppercase text-[14px] tracking-wider"
+            >
+              Top 4 Category
+            </h4>
+            <ul class="space-y-4 text-gray-400 text-[14px]">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Development</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Finance & Accounting</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Design</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Business</a
+                >
+              </li>
             </ul>
           </div>
-        </div>
 
-        <div class="quick-links">
-          <h3>Quick Links</h3>
           <div>
-            <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Become Instructor <img src="assets/icons/ArrowRight.svg" alt="arrowright"></a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Career</a></li>
+            <h4
+              class="text-white font-semibold mb-6 uppercase text-[14px] tracking-wider"
+            >
+              Quick Links
+            </h4>
+            <ul class="space-y-4 text-gray-400 text-[14px]">
+              <li>
+                <a href="#" class="hover:text-white transition-colors">About</a>
+              </li>
+              <li class="relative pb-1">
+                <a href="#" class="text-white flex items-center gap-2"
+                  >Become Instructor <span class="text-lg">→</span></a
+                >
+                <div
+                  class="absolute bottom-0 left-0 w-[140px] h-[2px] bg-[#FF6636]"
+                ></div>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Career</a
+                >
+              </li>
             </ul>
           </div>
-        </div>
 
-        <div class="support">
-          <h3>Support</h3>
           <div>
-            <ul>
-              <li><a href="#">Help Center</a></li>
-              <li><a href="#">FAQs</a></li>
-              <li><a href="#">Terms & Condition</a></li>
-              <li><a href="#">Privacy Policy</a></li>
+            <h4
+              class="text-white font-semibold mb-6 uppercase text-[14px] tracking-wider"
+            >
+              Support
+            </h4>
+            <ul class="space-y-4 text-gray-400 text-[14px]">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Help Center</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors">FAQs</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Terms & Condition</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
             </ul>
           </div>
-        </div>
 
-        <div class="download-app">
-          <h3>Downlaod our app</h3>
-          <div class="app">
-            <img src="assets/icons/Download our app.svg" alt="appstore">
-            <img src="assets/icons/Download our app (1).svg" alt="playstore">
+          <div>
+            <h4
+              class="text-white font-semibold mb-6 uppercase text-[14px] tracking-wider"
+            >
+              Download our app
+            </h4>
+            <div class="space-y-3">
+              <a
+                href="#"
+                class="flex items-center gap-4 bg-[#242931] p-3 border border-transparent hover:border-gray-600 transition-all"
+              >
+                <div class="text-white text-3xl">
+                  <img src="assets/icons/apple 1.svg" alt="" />
+                </div>
+                <div>
+                  <div
+                    class="text-[10px] text-gray-400 uppercase leading-none mb-1"
+                  >
+                    Download now
+                  </div>
+                  <div
+                    class="text-[16px] text-white font-semibold leading-none"
+                  >
+                    App Store
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="#"
+                class="flex items-center gap-4 bg-[#242931] p-3 border border-transparent hover:border-gray-600 transition-all"
+              >
+                <div class="text-white text-2xl">
+                  <img src="assets/icons/google-play-5 1.svg" alt="" />
+                </div>
+                <div>
+                  <div
+                    class="text-[10px] text-gray-400 uppercase leading-none mb-1"
+                  >
+                    Download now
+                  </div>
+                  <div
+                    class="text-[16px] text-white font-semibold leading-none"
+                  >
+                    Play Store
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
-
       </div>
-
-      <div class="bottom-footer">
-        <p>© 2021 - Eduflex. Designed by <span>Templatecookie</span>. All rights reserved</p>
-        <div class="language">
-          <span>English</span>
-          <img src="assets/icons/footer-ChevronDown (1).svg" alt="chevrondown">
-        </div>
-
+      <hr class="border-[#363B4780]" />
+      <!-- part three of footer -->
+      <div
+        class="px-[300px] pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <p class="text-gray-500 text-sm">
+          © 2021 - Eduflex. Designed by
+          <span class="text-white">Templatecookie</span>. All rights reserved
+        </p>
+        <select
+          class="bg-[#1D2026] text-gray-400 border border-gray-700 px-4 py-2 text-sm outline-none focus:border-[#FF6636]"
+        >
+          <option>English</option>
+          <option>French</option>
+          <option>Arabic</option>
+        </select>
       </div>
-
-
     </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   </body>
 </html>
