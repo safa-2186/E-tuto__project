@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses page</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+        /*COLORS*/
+        /*GRAY*/
+        --color-gray-900: #1d2026;
+        --color-gray-800: #363b47;
+        --color-gray-700: #4e5566;
+        --color-gray-600: #6e7485;
+        --color-gray-500: #8c94a3;
+        --color-gray-400: #a1a5b3;
+        --color-gray-300: #b7bac7;
+        --color-gray-200: #ced1d9;
+        --color-gray-100: #e9eaf0;
+        --color-gray-50: #f5f7fa;
+        --color-white: #ffffff;
+        /*PRIMARY*/
+        --color-primary-900: #33140b;
+        --color-primary-800: #662916;
+        --color-primary-700: #993d20;
+        --color-primary-600: #cc522b;
+        --color-primary-500: #ff6636;
+        --color-primary-400: #ff855e;
+        --color-primary-300: #ffa386;
+        --color-primary-200: #ffddd1;
+        --color-primary-100: #ffeee8;
+        /*SECONDARY*/
+        --color-secondary-900: #111033;
+        --color-secondary-800: #222065;
+        --color-secondary-700: #342f98;
+        --color-secondary-600: #453fca;
+        --color-secondary-500: #564ffd;
+        --color-secondary-400: #7872fd;
+        --color-secondary-300: #9a95fe;
+        --color-secondary-200: #cdcbfe;
+        --color-secondary-100: #ebebff;
+        /*SUCCESS*/
+        --color-success-900: #07260a;
+        --color-success-800: #0e4c14;
+        --color-success-700: #15711f;
+        --color-success-600: #1c9729;
+        --color-success-500: #23bd33;
+        --color-success-400: #4fca5c;
+        --color-success-300: #7bd785;
+        --color-success-200: #c3e5c6;
+        --color-success-100: #e1f7e3;
+        /*warning*/
+        --color-warning-900: #331d06;
+        --color-warning-800: #65390c;
+        --color-warning-700: #985613;
+        --color-warning-600: #cc7319;
+        --color-warning-500: #fd8e1f;
+        --color-warning-400: #fda44c;
+        --color-warning-300: #febb79;
+        --color-warning-200: #fed1a5;
+        --color-warning-100: #fff2e5;
+        /*DANGER*/
+        --color-danger-900: #2d0e0e;
+        --color-danger-800: #5b1b1b;
+        --color-danger-700: #882929;
+        --color-danger-600: #b63636;
+        --color-danger-500: #e34444;
+        --color-danger-400: #e96969;
+        --color-danger-300: #ee8f8f;
+        --color-danger-200: #f4c8c8;
+        --color-danger-100: #fff0f0;
+        /*DISPLAYS*/
+        /* Display/01 (80px) */
+        --text-display-01: 80px;
+        --text-display-01--line-height: 80px;
+        --text-display-01--font-weight: 600;
+        --text-display-01--letter-spacing: -0.02em;
+
+        /* Display/02 (72px) */
+        --text-display-02: 72px;
+        --text-display-02--line-height: 74px;
+        --text-display-02--font-weight: 600;
+        --text-display-02--letter-spacing: -0.02em;
+
+        /* Display/03 (64px) */
+        --text-display-03: 64px;
+        --text-display-03--line-height: 68px;
+        --text-display-03--font-weight: 600;
+        --text-display-03--letter-spacing: -0.02em;
+        /*HEADINGS*/
+        /*HEADING 1*/
+        --text-heading-01: 48px;
+        --text-heading-01--line-height: 52px;
+        --text-heading-01--font-weight: 600;
+        --text-heading-01--letter-spacing: -2%;
+        /*HEADING 2*/
+        --text-heading-02: 40px;
+        --text-heading-02--line-height: 48px;
+        --text-heading-02--font-weight: 600;
+        --text-heading-02--letter-spacing: -1%;
+        /*HEADING 3*/
+        --text-heading-03: 32px;
+        --text-heading-03--line-height: 40px;
+        --text-heading-03--font-weight: 600;
+        --text-heading-03--letter-spacing: -1%;
+        /*HEADING 4*/
+        --text-heading-04: 24px;
+        --text-heading-04--line-height: 32px;
+        --text-heading-04--font-weight: 600;
+        --text-heading-04--letter-spacing: -1%;
+        /*BUTTON-TEXT STYLE*/
+        /*BUTTON-TEXT LARGE*/
+        --text-button-large: 18px;
+        --text-button-large--line-height: 56px;
+        --text-button-large--font-weight: 600;
+        --text-button-large--letter-spacing: -1%;
+        /*BUTTON-TEXT MEDIUM*/
+        --text-button-medium: 16px;
+        --text-button-medium--line-height: 48px;
+        --text-button-medium--font-weight: 600;
+        --text-button-medium--letter-spacing: -0.8%;
+        /*BUTTON-TEXT SMALL*/
+        --text-button-small: 14px;
+        --text-button-small--line-height: 40px;
+        --text-button-small--font-weight: 600;
+        --text-button-small--letter-spacing: -0.4%;
+        /*LABELS*/
+        /*LABEL XXL*/
+        --text-label-xxl: 18px;
+        --text-label-xxl--line-height: 100%;
+        --text-label-xxl--font-weight: 500;
+        --text-label-xxl--letter-spacing: 0px;
+        /*LABEL XL*/
+        --text-label-xl: 16px;
+        --text-label-xl--line-height: 100%;
+        --text-label-xl--font-weight: 500;
+        --text-label-xl--letter-spacing: 0px;
+        /*LABEL LARGE*/
+        --text-label-large: 14px;
+        --text-label-large--line-height: 100%;
+        --text-label-large--font-weight: 500;
+        --text-label-large--letter-spacing: 0px;
+        /*LABEL MEDIUM*/
+        --text-label-medium: 12px;
+        --text-label-medium--line-height: 12px;
+        --text-label-medium--font-weight: 500;
+        --text-label-medium--letter-spacing: 0px;
+        /*LABEL SMALL*/
+        --text-label-small: 10px;
+        --text-label-small--line-height: 12px;
+        --text-label-small--font-weight: 500;
+        --text-label-small--letter-spacing: 0px;
+        /*BODY TEXT */
+        /*BODY XXXL*/
+        --text-body-xxxl: 24px;
+        --text-body-xxxl--line-height: 32px;
+        --text-body-xxxl--font-weight: 400;
+        --text-body-xxxl--letter-spacing: 0%;
+        /*BODY XXL*/
+        /*BODY XXL 400*/
+        --text-body-xxl-400: 20px;
+        --text-body-xxl-400--line-height: 32px;
+        --text-body-xxl-400--font-weight: 400;
+        --text-body-xxl-400--letter-spacing: 0%;
+        /*BODY XXL 500*/
+        --text-body-xxl-500: 20px;
+        --text-body-xxl-500--line-height: 26px;
+        --text-body-xxl-500--font-weight: 500;
+        --text-body-xxl-500--letter-spacing: 0%;
+        /*body xxl 600*/
+        --text-body-xxl-600: 20px;
+        --text-body-xxl-600--line-height: 26px;
+        --text-body-xxl-600--font-weight: 600;
+        --text-body-xxl-600--letter-spacing: 0%;
+        /*BODY XL*/
+        /*BODY XL 400*/
+        --text-body-xl-400: 18px;
+        --text-body-xl-400--line-height: 24px;
+        --text-body-xl-400--font-weight: 400;
+        --text-body-xl-400--letter-spacing: 0%;
+        /*BODY XL 500*/
+        --text-body-xl-500: 18px;
+        --text-body-xl-500--line-height: 24px;
+        --text-body-xl-500--font-weight: 500;
+        --text-body-xl-500--letter-spacing: 0%;
+        /*BODY XL 600*/
+        --text-body-xl-600: 18px;
+        --text-body-xl-600--line-height: 24px;
+        --text-body-xl-600--font-weight: 600;
+        --text-body-xl-600--letter-spacing: 0%;
+        /*BODY LARGE*/
+        /*BODY LARGE 400*/
+        --text-body-large-400: 16px;
+        --text-body-large-400--line-height: 24px;
+        --text-body-large-400--font-weight: 400;
+        --text-body-large-400--letter-spacing: 0%;
+        /*BODY LARGE 500*/
+        --text-body-large-500: 16px;
+        --text-body-large-500--line-height: 22px;
+        --text-body-large-500--font-weight: 500;
+        --text-body-large-500--letter-spacing: 0%;
+        /*BODY LARGE 600*/
+        --text-body-large-600: 16px;
+        --text-body-large-600--line-height: 22px;
+        --text-body-large-600--font-weight: 600;
+        --text-body-large-600--letter-spacing: 0%;
+        /*BODY MEDIUM*/
+        /*BODY MEDIUM 400*/
+        --text-body-medium-400: 14px;
+        --text-body-medium-400--line-height: 22px;
+        --text-body-medium-400--font-weight: 400;
+        --text-body-medium-400--letter-spacing: -1%;
+        /*BODY MEDIUM 500*/
+        --text-body-medium-500: 14px;
+        --text-body-medium-500--line-height: 20px;
+        --text-body-medium-500--font-weight: 500;
+        --text-body-medium-500--letter-spacing: -1%;
+        /*BODY MEDIUM 600*/
+        --text-body-medium-600: 14px;
+        --text-body-medium-600--line-height: 20px;
+        --text-body-medium-600--font-weight: 600;
+        --text-body-medium-600--letter-spacing: -1%;
+        /*BODY SMALL*/
+        /*BODY SMALL 400*/
+        --text-body-small-400: 12px;
+        --text-body-small-400--line-height: 16px;
+        --text-body-small-400--font-weight: 400;
+        --text-body-small-400--letter-spacing: 0%;
+        /*BODY SMALL 500*/
+        --text-body-small-500: 12px;
+        --text-body-small-500--line-height: 16px;
+        --text-body-small-500--font-weight: 500;
+        --text-body-small-500--letter-spacing: 0%;
+        /*BODY SMALL 600*/
+        --text-body-small-600: 12px;
+        --text-body-small-600--line-height: 16px;
+        --text-body-small-600--font-weight: 600;
+        --text-body-small-600--letter-spacing: 0%;
+        /*BODY TINY*/
+        /*BODY TINY 400*/
+        --text-body-tiny-400: 10px;
+        --text-body-tiny-400--line-height: 10px;
+        --text-body-tiny-400--font-weight: 400;
+        --text-body-tiny-400--letter-spacing: 0%;
+        /*BODY TINY 500*/
+        --text-body-tiny-500: 10px;
+        --text-body-tiny-500--line-height: 10px;
+        --text-body-tiny-500--font-weight: 500;
+        --text-body-tiny-500--letter-spacing: 0%;
+        /*BODY TINY 600*/
+        --text-body-tiny-600: 10px;
+        --text-body-tiny-600--line-height: 10px;
+        --text-body-tiny-600--font-weight: 600;
+        --text-body-tiny-600--letter-spacing: 0%;
+        /*BUTTONS*/
+        /* BUTTONS PRIMARY*/
+        /*BUTTONS PRIMARY-PRIMARY*/
+        --color-btn-primary-primary: var(--color-primary-500);
+        --color-btn-primary-primary-hover: var(--color-primary-600);
+        --color-btn-primary-primary-disabled: var(--color-primary-200);
+        /*BUTTONS PRIMARY-SECONDARY*/
+        --color-btn-primary-secondary: var(--color-secondary-500);
+        --color-btn-primary-secondary-hover: var(--color-secondary-600);
+        --color-btn-primary-secondary-disabled: var(--color-secondary-200);
+        /*BUTTONS PRIMARY-GRAY*/
+        --color-btn-primary-gray: var(--color-gray-900);
+        --color-btn-primary-gray-hover: var(--color-gray-800);
+        --color-btn-primary-gray-disabled: var(--color-gray-200);
+        /*BUTTONS SECONDARY-PRIMARY*/
+        --color-btn-secondary-primary: var(--color-primary-100);
+        --color-btn-secondary-primary-hover: var(--color-primary-200);
+        --color-btn-secondary-primary-disabled: var(--color-primary-100);
+        /*BUTTONS SECONDARY-SECONDARY*/
+        --color-btn-secondary-secondary: var(--color-secondary-100);
+        --color-btn-secondary-secondary-hover: var(--color-secondary-200);
+        --color-btn-secondary-secondary-disabled: var(--color-secondary-100);
+        /*BUTTONS SECONDARY-GRAY*/
+        --color-btn-secondary-gray: var(--color-gray-50);
+        --color-btn-secondary-gray-hover: var(--color-gray-100);
+        --color-btn-secondary-gray-disabled: var(--color-gray-50);
+        /*BUTTONS TERTIARY-PRIMARY*/
+        --color-btn-tertiary-primary: var(--color-white);
+        --color-btn-tertiary-primary-hover: var(--color-primary-100);
+        --color-btn-tertiary-primary-disabled: var(--color-white);
+        /*BUTTONS TERTIARY-SECONDARY*/
+        --color-btn-tertiary-secondary: var(--color-white);
+        --color-btn-tertiary-secondary-hover: var(--color-secondary-100);
+        --color-btn-tertiary-secondary-disabled: var(--color-white);
+        /*BUTTONS TERTIARY-GRAY*/
+        --color-btn-tertiary-gray: var(--color-gray-50);
+        --color-btn-tertiary-gray-hover: var(--color-gray-100);
+        --color-btn-tertiary-gray-disabled: var(--color-gray-50);
+      }
+      @layer base {
+        body {
+          font-family: var(--font-sans);
+          @apply text-gray-900 antialiased;
+        }
+      }
+      @layer components {
+        .btn-primary {
+          background-color: var(--color-btn-primary-primary);
+          color: var(--color-white);
+        }
+        .btn-primary:hover {
+          background-color: var(--color-btn-primary-primary-hover);
+        }
+        .btn-primary:disabled {
+          background-color: var(--color-btn-primary-primary-disabled);
+          cursor: not-allowed;
+        }
+        .btn-secondary {
+          background-color: var(--color-btn-secondary-primary);
+          color: var(--color-gray-900);
+        }
+        .btn-secondary:hover {
+          background-color: var(--color-btn-secondary-primary-hover);
+        }
+        .btn-secondary:disabled {
+          background-color: var(--color-btn-secondary-primary-disabled);
+          cursor: not-allowed;
+        }
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 class="font-[inter] font-semibold font-[32px] ">
+     Gift Course
+    </h1>
+
+  </body>
+</html>
