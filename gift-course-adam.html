@@ -326,13 +326,130 @@
     </style>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
   </head>
   <body>
-    <h1 class="font-[inter] font-semibold font-[32px] ">
-     Gift Course
-    </h1>
+    <body class="bg-white antialiased p-6 md:p-12">
 
+    <div class="max-w-[800px] mx-auto">
+        <h1 class="text-[32px] font-semibold leading-[40px] tracking-tight mb-8">Gift Course</h1>
+
+        <form class="space-y-10">
+            
+            <section>
+                <h2 class="text-[18px] font-semibold mb-6">Recipient's Information</h2>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-[14px] font-medium mb-1.5">Recipient's Name</label>
+                        <input type="text" placeholder="Full name" 
+                            class="w-full px-4 py-3 border border-[#e9eaf0] rounded-sm placeholder-[#a1a5b3] focus:outline-none focus:border-[#ff6636]">
+                    </div>
+
+                    <div>
+                        <label class="block text-[14px] font-medium mb-1.5">Recipient's Email:</label>
+                        <input type="email" placeholder="Email Address" 
+                            class="w-full px-4 py-3 border border-[#e9eaf0] rounded-sm placeholder-[#a1a5b3] focus:outline-none focus:border-[#ff6636]">
+                    </div>
+
+                    <div>
+                        <label class="block text-[14px] font-medium mb-1.5">Gift Message</label>
+                        <textarea placeholder="Add your personal message here..." rows="4"
+                            class="w-full px-4 py-3 border border-[#e9eaf0] rounded-sm placeholder-[#a1a5b3] focus:outline-none focus:border-[#ff6636] resize-none"></textarea>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="flex items-center gap-1.5 mb-6">
+                    <h2 class="text-[18px] font-semibold">Payment Method</h2>
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#e34444]"></span>
+                </div>
+
+                <div class="border border-[#e9eaf0] rounded-sm overflow-hidden">
+                    <div class="flex flex-wrap items-center justify-between p-4 border-b border-[#e9eaf0]">
+                        <div class="flex items-center gap-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Visa_2021.svg" alt="Visa" class="h-4">
+                            <span class="text-[#4e5566]">4855 **** **** ****</span>
+                        </div>
+                        <div class="flex gap-8 text-[#4e5566] text-sm">
+                            <span>04/24</span>
+                            <span>Vako Shvili</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap items-center justify-between p-4 border-b border-[#e9eaf0]">
+                        <div class="flex items-center gap-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" class="h-6">
+                            <span class="text-[#4e5566]">5795 **** **** ****</span>
+                        </div>
+                        <div class="flex gap-8 text-[#4e5566] text-sm">
+                            <span>04/24</span>
+                            <span>Vako Shvili</span>
+                        </div>
+                    </div>
+
+                    <div class="p-4 border-b border-[#e9eaf0]">
+                        <div class="flex items-center gap-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" class="h-5">
+                            <span class="text-[#a1a5b3] text-[13px]">You will be redirected to the PayPal site after reviewing your order.</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between p-4 border-2 border-[#23bd33] bg-white">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-[#ff6636]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M7 15h1m4 0h1m-7 4h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span class="font-medium">New Payment Cards</span>
+                        </div>
+                        <div class="w-5 h-5 bg-[#23bd33] rounded-full flex items-center justify-center">
+                            <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 space-y-4">
+                    <div>
+                        <label class="block text-[14px] font-medium mb-1.5">Name</label>
+                        <input type="text" placeholder="Name on card" 
+                            class="w-full px-4 py-3 border border-[#e9eaf0] rounded-sm placeholder-[#a1a5b3] focus:outline-none focus:border-[#ff6636]">
+                    </div>
+
+                    <div>
+                        <label class="block text-[14px] font-medium mb-1.5">Card Number</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-4 flex items-center">
+                                <svg class="w-5 h-5 text-[#ff6636]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M3 10h18M7 15h1m4 0h1m-7 4h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </span>
+                            <input type="text" placeholder="Label" 
+                                class="w-full pl-12 pr-4 py-3 border border-[#e9eaf0] rounded-sm placeholder-[#a1a5b3] focus:outline-none focus:border-[#ff6636]">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-[14px] font-medium mb-1.5">MM / YY</label>
+                            <input type="text" placeholder="MM / YY" 
+                                class="w-full px-4 py-3 border border-[#e9eaf0] rounded-sm placeholder-[#a1a5b3] focus:outline-none focus:border-[#ff6636]">
+                        </div>
+                        <div>
+                            <label class="block text-[14px] font-medium mb-1.5">CVC</label>
+                            <input type="text" placeholder="Security Code" 
+                                class="w-full px-4 py-3 border border-[#e9eaf0] rounded-sm placeholder-[#a1a5b3] focus:outline-none focus:border-[#ff6636]">
+                        </div>
+                    </div>
+
+                    <div class="flex items-center pt-2">
+                        <input type="checkbox" id="save" class="w-5 h-5 rounded border-[#ced1d9] text-[#ff6636] focus:ring-[#ff6636] accent-[#ff6636]">
+                        <label for="save" class="ml-3 text-[14px] text-[#4e5566] cursor-pointer">Remember this card, save it on my card list</label>
+                    </div>
+                </div>
+            </section>
+        </form>
+    </div>
   </body>
 </html>
